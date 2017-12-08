@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="349bb13a-1aac-4d9b-a840-cfa82671885f" name="Default" comment="nardeen">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/A2Z/Brand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/A2Z/BrandController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/A2Z/BrandView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/A2Z/Model.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/A2Z/OnlineStore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/A2Z/OnsiteStore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/A2Z/Product.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/A2Z/Store.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/A2Z/StoreController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/A2Z/StoreView.java" />
+    <list default="true" id="349bb13a-1aac-4d9b-a840-cfa82671885f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A2Z/StoreOwner.java" afterPath="$PROJECT_DIR$/src/A2Z/StoreOwner.java" />
     </list>
@@ -26,11 +16,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StoreOwner.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StoreOwner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/A2Z/StoreOwner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -46,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnsiteStore.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OnsiteStore.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/A2Z/OnsiteStore.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -139,7 +129,6 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/A2Z/User.java" />
         <option value="$PROJECT_DIR$/src/A2Z/Main.java" />
-        <option value="$PROJECT_DIR$/src/A2Z/StoreOwner.java" />
         <option value="$PROJECT_DIR$/src/A2Z/BrandController.java" />
         <option value="$PROJECT_DIR$/src/A2Z/BrandView.java" />
         <option value="$PROJECT_DIR$/src/A2Z/OnlineStore.java" />
@@ -148,6 +137,7 @@
         <option value="$PROJECT_DIR$/src/A2Z/StoreController.java" />
         <option value="$PROJECT_DIR$/src/A2Z/StoreView.java" />
         <option value="$PROJECT_DIR$/src/A2Z/Brand.java" />
+        <option value="$PROJECT_DIR$/src/A2Z/StoreOwner.java" />
       </list>
     </option>
   </component>
@@ -506,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512756524651</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="nardeen">
+      <created>1512757786339</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1512757786339</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -525,7 +522,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5697674" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -709,14 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A2Z/StoreOwner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/A2Z/StoreController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1717">
@@ -793,6 +782,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A2Z/StoreOwner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
