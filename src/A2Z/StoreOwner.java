@@ -6,7 +6,8 @@ import java.util.Vector;
 public class StoreOwner extends User {
     private Vector<Store> stores;
 
-
+    public StoreOwner() {
+    }
     public StoreOwner(Vector<Store> stores) {
         this.stores = stores;
     }
@@ -16,15 +17,12 @@ public class StoreOwner extends User {
         this.setUsername(usernm);
         this.setPassword(pass);
     }
-
     public Vector<Store> getStores() {
         return stores;
     }
-
     public void setStores(Vector<Store> stores) {
         this.stores = stores;
     }
-
     public boolean AddStore(String name,String StoreId)
     {
         Store s = new Store(name,StoreId);
@@ -107,6 +105,7 @@ public class StoreOwner extends User {
     }
     public boolean Verify(String address)
     {
+        /////////
         return true;
     }
 }
