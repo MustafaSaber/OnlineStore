@@ -4,7 +4,7 @@ public class Main {
         int x = 4;
         int f = 4;
         System.out.println("Hello World! " +  x + " " + f);
-        System.out.println("Hello World! test to make commit");
+        System.out.println("Hello World! test to make commit\n");
 
     }
 }
