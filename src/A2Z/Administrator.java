@@ -14,11 +14,13 @@ public class Administrator extends User{
 
     public boolean AddAdminToDb()
     {
+        system.administrators.add(this);
         return true;
     }
 
     public boolean RemoveAdminFromDb()
     {
+        system.administrators.remove(this);
         return true;
     }
 

@@ -14,33 +14,54 @@ public class AdministratorController {
         this.administrator = administrator;
     }
 
-    public void OpenBrandView()
-    {
+    public void OpenBrandView() {
         //openBrandView;
     }
-    public boolean AddAdminToDBCont(String name,String email,
-                                    String username,String password) {
+    public void OpenModelView() {
+        //open ModelView;
+    }
+
+
+    public boolean AddAdminToDBCont(String name, String email,
+                                    String username, String password) {
         Administrator admin = searchForAdmin(username);
         if (admin != null)
             return false;
 
-        admin = new Administrator(name,email,username,password);
+        admin = new Administrator(name, email, username, password);
 
         return admin.AddAdminToDb();
     }
 
-    public Administrator searchForAdmin(String username)
-    {
-        for (Administrator a : System.administrators)
-        {
+    public Administrator searchForAdmin(String username) {
+        for (Administrator a : system.administrators) {
             if (a.getUsername().equals(username))
                 return a;
         }
         return null;
     }
 
-public boolean RemoveAdminFromDBCont(String username)
+    public boolean UpdateAdminNameInDBCont(String username,String name)
     {
+        Administrator admin = searchForAdmin(username);
+        if (admin == null)
+            return false;
+
+        admin.setUsername(name);
+        return true;
+    }
+
+    public boolean UpdateAdminPassInDBCont(String username,String password)
+    {
+        Administrator admin = searchForAdmin(username);
+        if (admin == null)
+            return false;
+
+        admin.setPassword(password);
+        return true;
+    }
+
+    public boolean RemoveAdminFromDBCont(String username) {
 
         Administrator admin = searchForAdmin(username);
         if (admin == null)
@@ -48,6 +69,19 @@ public boolean RemoveAdminFromDBCont(String username)
         return admin.RemoveAdminFromDb();
     }
 
+    public void ViewSuggBrandsCont()
+    {
+        System.out.println("Suggested Brands is : ");
+        for (Brand b : system.suggestBrands)
+        {
+            System.out.println(b.getName());
+        }
+    }
+
+    public void ViewSuggModelsCont()
+    {
+
+    }
 
 
 

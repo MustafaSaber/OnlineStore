@@ -14,20 +14,16 @@ public class NormalCustomer  extends User {
         super(name, email, username, password);
     }
 
-    boolean AddUserToDb()
+    public boolean AddUserToDb()
     {
-        return false;
+        system.normalCustomers.add(this);
+        return true;
     }
 
-    boolean UpdateUserInDb()
+    public boolean RemoveUserFromDB()
     {
-        return false;
-    }
-
-
-    boolean RemoveUserFromDB()
-    {
-        return  false;
+        system.normalCustomers.remove(this);
+        return true;
     }
 
 }

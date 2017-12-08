@@ -49,7 +49,7 @@ public class StoreOwner extends User {
     public void SuggestBrand(String name,String id)
     {
         Brand b = new Brand(name,id);
-        System.suggestBrands.add(b);
+        system.suggestBrands.add(b);
     }
     public String ViewStat()
     {
@@ -63,17 +63,17 @@ public class StoreOwner extends User {
     public boolean AddStoreOwnerToDB(String name ,String email,String usernm ,String pass)
     {
         StoreOwner so = new StoreOwner(name,email,usernm,pass);
-        System.storeOwners.add(so);
+        system.storeOwners.add(so);
         return true;
     }
     public boolean RemoveStoreOwnerToDB(String Uname)
     {
         //search for storeowner
-        for(StoreOwner so :System.storeOwners)
+        for(StoreOwner so :system.storeOwners)
         {
             if(so.getUsername() == Uname)
             {
-                System.storeOwners.remove(so);
+                system.storeOwners.remove(so);
                 return true;
             }
         }
@@ -81,7 +81,7 @@ public class StoreOwner extends User {
     }
     public boolean UpdateStoreOwnerToDB(String Uname)
     {
-        for(StoreOwner so :System.storeOwners)
+        for(StoreOwner so :system.storeOwners)
         {
             if(so.getUsername() == Uname)
             {

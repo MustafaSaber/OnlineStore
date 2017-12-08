@@ -23,21 +23,48 @@ public class NormalCustomerController {
         this.normalCustomer = normalCustomer;
     }
 
+
+    public NormalCustomer searchForNormalCustomer(String username)
+    {
+        for (NormalCustomer n : system.normalCustomers)
+            if (n.getUsername().equals(username))
+                return n;
+        return null;
+    }
+
     public boolean AddUserToDBCont(String name,String email,
                                    String username,String password) {
-        normalCustomer = new NormalCustomer(name,email,username,password);
-        return normalCustomer.AddUserToDb();
+        if (searchForNormalCustomer(username) != null)
+            return false;
+        NormalCustomer n = new NormalCustomer(name,email,username,password);
+        return n.AddUserToDb();
     }
 
-    public boolean UpdateUserInDbCont()
+    public boolean UpdateUserNameInDbCont(String username,String name)
     {
-        return normalCustomer.UpdateUserInDb();
+        NormalCustomer n = searchForNormalCustomer(username);
+        if (n == null)
+            return false;
+        n.setName(name);
+        return true;
+    }
+
+    public boolean UpdateUserPassInDbCont(String username,String password)
+    {
+        NormalCustomer n = searchForNormalCustomer(username);
+        if (n == null)
+            return false;
+        n.setPassword(password);
+        return true;
     }
 
 
-    public boolean RemoveUserFromDBCont()
+    public boolean RemoveUserFromDBCont(String username)
     {
-        return normalCustomer.RemoveUserFromDB();
+        NormalCustomer n = searchForNormalCustomer(username);
+        if (username == null)
+            return false;
+        return n.RemoveUserFromDB();
     }
 
 }
