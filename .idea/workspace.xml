@@ -26,26 +26,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NormalCustomer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NormalCustomer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/A2Z/NormalCustomer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="129">
+              <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
               <folding>
                 <element signature="e#346#347#0" expanded="true" />
                 <element signature="e#374#375#0" expanded="true" />
                 <element signature="e#410#411#0" expanded="true" />
                 <element signature="e#438#439#0" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NormalCustomerController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NormalCustomerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/A2Z/NormalCustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="220">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#364#365#0" expanded="true" />
                 <element signature="e#401#402#0" expanded="true" />
@@ -73,13 +75,13 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="98" column="1" lean-forward="true" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+            <state relative-caret-position="1119">
+              <caret line="110" column="1" lean-forward="true" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
               <folding>
-                <marker date="1512757989267" expanded="true" signature="69796:69838" ph="..." />
-                <marker date="1512757989267" expanded="true" signature="69796:69856" ph="..." />
-                <marker date="1512757989267" expanded="true" signature="69796:69869" ph="..." />
-                <marker date="1512757989267" expanded="true" signature="69796:69884" ph="..." />
+                <marker date="1512758244830" expanded="true" signature="70943:70960" ph="..." />
+                <marker date="1512758244830" expanded="true" signature="70943:70978" ph="..." />
+                <marker date="1512758244830" expanded="true" signature="70943:70991" ph="..." />
+                <marker date="1512758244830" expanded="true" signature="70943:71006" ph="..." />
               </folding>
             </state>
           </provider>
@@ -167,10 +169,10 @@
         <option value="$PROJECT_DIR$/src/firstClass.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/A2Z/Main.java" />
-        <option value="$PROJECT_DIR$/src/A2Z/NormalCustomer.java" />
         <option value="$PROJECT_DIR$/src/A2Z/NormalCustomerController.java" />
         <option value="$PROJECT_DIR$/src/A2Z/Administrator.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/src/A2Z/NormalCustomer.java" />
       </list>
     </option>
   </component>
@@ -848,11 +850,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512756125136</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Mina Normal">
+      <created>1512758125197</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1512758125197</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4497000" />
+    <option name="totallyTimeSpent" value="4685000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -930,7 +939,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test commit" />
     <MESSAGE value="Normal Customer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Normal Customer" />
+    <MESSAGE value="Mina Normal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mina Normal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1241,13 +1251,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="98" column="1" lean-forward="true" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+        <state relative-caret-position="1119">
+          <caret line="110" column="1" lean-forward="true" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
           <folding>
-            <marker date="1512757989267" expanded="true" signature="69796:69838" ph="..." />
-            <marker date="1512757989267" expanded="true" signature="69796:69856" ph="..." />
-            <marker date="1512757989267" expanded="true" signature="69796:69869" ph="..." />
-            <marker date="1512757989267" expanded="true" signature="69796:69884" ph="..." />
+            <marker date="1512758244830" expanded="true" signature="70943:70960" ph="..." />
+            <marker date="1512758244830" expanded="true" signature="70943:70978" ph="..." />
+            <marker date="1512758244830" expanded="true" signature="70943:70991" ph="..." />
+            <marker date="1512758244830" expanded="true" signature="70943:71006" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1268,10 +1278,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/A2Z/NormalCustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding>
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/A2Z/NormalCustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="220">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#364#365#0" expanded="true" />
             <element signature="e#401#402#0" expanded="true" />
@@ -1281,19 +1306,6 @@
             <element signature="e#880#881#0" expanded="true" />
             <element signature="e#930#931#0" expanded="true" />
             <element signature="e#986#987#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/A2Z/NormalCustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -28,7 +28,6 @@ public class NormalCustomer  extends User {
     boolean RemoveUserFromDB()
     {
         return  false;
-
     }
 
 }
