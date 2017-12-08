@@ -10,6 +10,8 @@ public class System {
     static Vector<Administrator> administrators = new Vector<>();
     static Vector<StoreOwner> storeOwners = new Vector<>();
     static Vector<Brand> brands = new Vector<>();
+    static Vector<Model> models = new Vector<>();
     static Vector<Store> stores = new Vector<>();
-
+    static Vector<Product> suggestProducts  = new Vector<>();
+    static Vector<Brand> suggestBrands  = new Vector<>();
 }
