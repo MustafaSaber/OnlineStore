@@ -45,43 +45,51 @@ public class StoreOwnerController {
         return "";
     }
 
-    /**
-     * @return
-     */
-    public Boolean AddStoreOwnerToDBCont(String name,String id ,String email,String password) {
-        // TODO implement here
-        return null;
+    public Boolean AddStoreOwnerToDBCont(String name, String email,String username,String password) {
+        StoreOwner storeOwner = new StoreOwner(name,email,username,password);
+        system.storeOwners.add(storeOwner);
+        return true;
     }
 
-    /**
-     * @return
-     */
-    public Boolean RemoveStoreOwnerToDBCont(String name,String id,String email,String password) {
-        // TODO implement here
-        return null;
+    public Boolean RemoveStoreOwnerToDBCont(String username,String email) {
+        for (StoreOwner storeOwner : system.storeOwners)
+        {
+            if(storeOwner.getUsername() == username && storeOwner.getEmail()==email)
+            {
+                system.storeOwners.remove(storeOwner);
+                return true;
+            }
+        }
+        return false;
     }
 
-    /**
-     * @return
-     */
     public Boolean UpdateStoreOwnerNameToDBCont(String name) {
-        // TODO implement here
-        return null;
+
+        for (StoreOwner storeOwner : system.storeOwners)
+        {
+            if(storeOwner.getName() == so.getName())
+            {
+                storeOwner.setName(name);
+                return true;
+            }
+        }
+        return false;
     }
 
-    /**
-     * @return
-     */
-    public Boolean VerifyCont(String Address) {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
     public Boolean UpdateStoreOwnerPasswordToDBCont(String password) {
-        // TODO implement here
+        for (StoreOwner storeOwner : system.storeOwners)
+        {
+            if(storeOwner.getPassword() == so.getPassword())
+            {
+                storeOwner.setPassword(password);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Boolean VerifyCont(String Address) {
+
         return null;
     }
 
