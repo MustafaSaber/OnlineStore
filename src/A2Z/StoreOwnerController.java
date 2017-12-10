@@ -1,9 +1,9 @@
 package A2Z;
 
-/**
- * 
- */
-public class StoreOwnerController {
+
+
+public class StoreOwnerController
+{
     private StoreOwner so;
 
     public StoreOwnerController() {
@@ -20,7 +20,7 @@ public class StoreOwnerController {
         system.sc.RemoveStoreToDB(name,id);
         for (Store store : so.getStores())
         {
-            if(store.getStoreID() == id && store.getName() == name)
+            if(store.getStoreID().equals(id) && store.getName().equals(name))
             {
                 so.getStores().remove(store);
                 return true;
@@ -38,9 +38,14 @@ public class StoreOwnerController {
          system.suggestBrands.add(brand);
     }
 
-    public String ViewStatCont() {
-
-        return "";
+    public void ViewStatCont() {
+        for (Store store : so.getStores())
+        {
+            for(Product p : store.getProducts())
+            {
+                System.out.println("Product: ");
+            }
+        }
     }
 
     public Boolean AddStoreOwnerToDBCont(String name, String email,String username,String password) {
@@ -52,7 +57,7 @@ public class StoreOwnerController {
     public Boolean RemoveStoreOwnerToDBCont(String username,String email) {
         for (StoreOwner storeOwner : system.storeOwners)
         {
-            if(storeOwner.getUsername() == username && storeOwner.getEmail()==email)
+            if(storeOwner.getUsername().equals(username) && storeOwner.getEmail().equals(email))
             {
                 system.storeOwners.remove(storeOwner);
                 return true;
@@ -65,7 +70,7 @@ public class StoreOwnerController {
 
         for (StoreOwner storeOwner : system.storeOwners)
         {
-            if(storeOwner.getName() == so.getName())
+            if(storeOwner.getName().equals(so.getName()))
             {
                 storeOwner.setName(name);
                 return true;
@@ -77,7 +82,7 @@ public class StoreOwnerController {
     public Boolean UpdateStoreOwnerPasswordToDBCont(String password) {
         for (StoreOwner storeOwner : system.storeOwners)
         {
-            if(storeOwner.getPassword() == so.getPassword())
+            if(storeOwner.getPassword().equals(so.getPassword()))
             {
                 storeOwner.setPassword(password);
                 return true;
@@ -88,7 +93,7 @@ public class StoreOwnerController {
 
     public Boolean VerifyCont(String Address) {
 
-        return null;
+        return true;
     }
 
 }
