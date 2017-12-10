@@ -42,8 +42,9 @@ public class StoreOwnerController
     {
         for (Store store : so.getStores())
         {
-            for(Product p : store.getProducts())
-               System.out.println("Product: "+ p.getModel().getName()+" >> "+  p.getModel().getView() );
+            for(Product p : store.getProducts()) {
+                System.out.println("Product: " + p.getModel().getName() + " >> " + p.getModel().getView());
+            }
         }
     }
     public void MostViewiedProductInEachStore() //	Get the most viewed product in a store
