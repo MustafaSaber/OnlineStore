@@ -4,30 +4,21 @@ public class Model {
     private String modelID;
     private String name;
     private Brand myBrand;
-    private int views;
+    private int view;
 
     public Model(){
         views = 0;
     }
 
-    public Model(String modelID, String name, Brand myBrand) {
+    public Model(String modelID, String name, Brand myBrand, int view) {
         this.modelID = modelID;
         this.name = name;
         this.myBrand = myBrand;
-        views = 0;
-    }
-
-    public int getViews() {
-        return views;
-    }
-
-    public void setViews(int views) {
-        this.views = views;
+        this.view = view;
     }
 
     public String getModelID() {
         return modelID;
-
     }
 
     public void setModelID(String modelID) {
@@ -50,4 +41,11 @@ public class Model {
         this.myBrand = myBrand;
     }
 
+    public int getView() {
+        return view;
+    }
+
+    public void setView(int view) {
+        this.view = view;
+    }
 }
