@@ -1,7 +1,5 @@
 package A2Z;
 
-import A2Z.StoreOwner;
-
 /**
  * 
  */
