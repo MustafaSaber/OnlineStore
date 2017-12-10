@@ -1,24 +1,22 @@
 package A2Z;
 
-import A2Z.Store;
-
 import java.util.*;
 
 /**
  * 
  */
-public class StoreOwner extends User {
+public class CreditCard extends Payment {
 
     /**
      * Default constructor
      */
-    public StoreOwner() {
+    public CreditCard() {
     }
 
     /**
      * 
      */
-    private Vector<Store> stores;
+    private String cardID;
 
 
 

@@ -1,70 +1,51 @@
 package A2Z;
 
+import A2Z.NormalCustomer;
+
 /**
- * Created by Mina_Yousry on 08/12/2017.
+ * 
  */
 public class NormalCustomerController {
-    private NormalCustomer normalCustomer;
 
+    /**
+     * Default constructor
+     */
     public NormalCustomerController() {
-
     }
 
-    public NormalCustomerController(NormalCustomer normalCustomer) {
-
-        this.normalCustomer = normalCustomer;
-    }
-
-    public NormalCustomer getNormalCustomer() {
-        return normalCustomer;
-    }
-
-    public void setNormalCustomer(NormalCustomer normalCustomer) {
-        this.normalCustomer = normalCustomer;
-    }
+    /**
+     * 
+     */
+    public NormalCustomer normal;
 
 
-    public NormalCustomer searchForNormalCustomer(String username)
-    {
-        for (NormalCustomer n : system.normalCustomers)
-            if (n.getUsername().equals(username))
-                return n;
+    /**
+     * @param Name 
+     * @param Email 
+     * @param UserName 
+     * @param password 
+     * @return
+     */
+    public Boolean AddUserToDBCont(String Name, String Email, String UserName, String password) {
+        // TODO implement here
         return null;
     }
 
-    public boolean AddUserToDBCont(String name,String email,
-                                   String username,String password) {
-        if (searchForNormalCustomer(username) != null)
-            return false;
-        NormalCustomer n = new NormalCustomer(name,email,username,password);
-        return n.AddUserToDb();
+    /**
+     * @return
+     */
+    public Boolean UpdateUserInDBCont() {
+        // TODO implement here
+        return null;
     }
 
-    public boolean UpdateUserNameInDbCont(String username,String name)
-    {
-        NormalCustomer n = searchForNormalCustomer(username);
-        if (n == null)
-            return false;
-        n.setName(name);
-        return true;
-    }
-
-    public boolean UpdateUserPassInDbCont(String username,String password)
-    {
-        NormalCustomer n = searchForNormalCustomer(username);
-        if (n == null)
-            return false;
-        n.setPassword(password);
-        return true;
-    }
-
-
-    public boolean RemoveUserFromDBCont(String username)
-    {
-        NormalCustomer n = searchForNormalCustomer(username);
-        if (username == null)
-            return false;
-        return n.RemoveUserFromDB();
+    /**
+     * @param Username 
+     * @return
+     */
+    public Boolean RemoveFromDBCont(String Username) {
+        // TODO implement here
+        return null;
     }
 
 }

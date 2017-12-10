@@ -1,88 +1,84 @@
 package A2Z;
 
+import A2Z.Administrator;
+
 /**
- * Created by Mina_Yousry on 08/12/2017.
+ * 
  */
 public class AdministratorController {
-    Administrator administrator;
 
+    /**
+     * Default constructor
+     */
     public AdministratorController() {
     }
 
-    public AdministratorController(Administrator administrator) {
+    /**
+     * 
+     */
+    public Administrator admin;
 
-        this.administrator = administrator;
+
+    /**
+     * @param Name 
+     * @return
+     */
+    public boolean AddBrandCont(String Name) {
+        // TODO implement here
+        return false;
     }
 
-    public void OpenBrandView() {
-        //openBrandView;
-    }
-    public void OpenModelView() {
-        //open ModelView;
-    }
-
-
-    public boolean AddAdminToDBCont(String name, String email,
-                                    String username, String password) {
-        Administrator admin = searchForAdmin(username);
-        if (admin != null)
-            return false;
-
-        admin = new Administrator(name, email, username, password);
-
-        return admin.AddAdminToDb();
+    /**
+     * @return
+     */
+    public boolean RemoveBrandCont() {
+        // TODO implement here
+        return false;
     }
 
-    public Administrator searchForAdmin(String username) {
-        for (Administrator a : system.administrators) {
-            if (a.getUsername().equals(username))
-                return a;
-        }
+    /**
+     * @param Name 
+     * @param brand 
+     * @return
+     */
+    public boolean AddModelCont(String Name, String brand) {
+        // TODO implement here
+        return false;
+    }
+
+    /**
+     * @param Name 
+     * @return
+     */
+    public boolean RemoveModelCont(String Name) {
+        // TODO implement here
+        return false;
+    }
+
+    /**
+     * @param username 
+     * @param password 
+     * @return
+     */
+    public Boolean AddAdminToDBCont(String username, String password) {
+        // TODO implement here
         return null;
     }
 
-    public boolean UpdateAdminNameInDBCont(String username,String name)
-    {
-        Administrator admin = searchForAdmin(username);
-        if (admin == null)
-            return false;
-
-        admin.setUsername(name);
-        return true;
+    /**
+     * @return
+     */
+    public Boolean RemoveAdminFromDBCont() {
+        // TODO implement here
+        return null;
     }
 
-    public boolean UpdateAdminPassInDBCont(String username,String password)
-    {
-        Administrator admin = searchForAdmin(username);
-        if (admin == null)
-            return false;
-
-        admin.setPassword(password);
-        return true;
+    /**
+     * @param
+     * @return
+     */
+    public void ViewSuggCont() {
+        // TODO implement here
     }
-
-    public boolean RemoveAdminFromDBCont(String username) {
-
-        Administrator admin = searchForAdmin(username);
-        if (admin == null)
-            return false;
-        return admin.RemoveAdminFromDb();
-    }
-
-    public void ViewSuggBrandsCont()
-    {
-        System.out.println("Suggested Brands is : ");
-        for (Brand b : system.suggestBrands)
-        {
-            System.out.println(b.getName());
-        }
-    }
-
-    public void ViewSuggModelsCont()
-    {
-
-    }
-
-
 
 }
