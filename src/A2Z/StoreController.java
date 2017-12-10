@@ -1,5 +1,5 @@
 package A2Z;
-import static A2Z.System.stores;
+import static A2Z.system.stores;
 public class StoreController {
     private Store myStore;
 

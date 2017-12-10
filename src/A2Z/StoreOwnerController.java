@@ -1,102 +1,93 @@
 package A2Z;
 
-import A2Z.StoreOwner;
-
 /**
  * 
  */
 public class StoreOwnerController {
+    private StoreOwner so;
 
-    /**
-     * Default constructor
-     */
     public StoreOwnerController() {
     }
 
-    /**
-     * 
-     */
-    private StoreOwner so;
-
-
-
-
-    /**
-     * @return
-     */
     public Boolean AddStoreCont(String id,String name) {
-        // TODO implement here
-        return null;
+        Store store = new Store(name,id);
+        so.getStores().add(store);
+        system.sc.AddStoreToDB(name,id);
+        return true;
     }
 
-    /**
-     * @return
-     */
     public Boolean RemoveStoreCont(String id,String name) {
-        // TODO implement here
-        return null;
+        system.sc.RemoveStoreToDB(name,id);
+        for (Store store : so.getStores())
+        {
+            if(store.getStoreID() == id && store.getName() == name)
+            {
+                so.getStores().remove(store);
+                return true;
+            }
+        }
+        return false;
     }
 
-    /**
-     * @return
-     */
-    public void SuggestProductCont(String name,String id,Brand b) {
-        // TODO implement here
-
+    public void SuggestModelCont(String name,String id,Brand b) {
+         Model model = new Model(id,name,b);
+         system.suggestModels.add(model);
     }
-
-    /**
-     * @return
-     */
     public void SuggestBrandCont(String id,String name) {
-        // TODO implement here
+         Brand brand = new Brand(name,id);
+         system.suggestBrands.add(brand);
     }
 
-    /**
-     * @return
-     */
     public String ViewStatCont() {
-        // TODO implement here
+
         return "";
     }
 
-    /**
-     * @return
-     */
-    public Boolean AddStoreOwnerToDBCont(String name,String id ,String email,String password) {
-        // TODO implement here
-        return null;
+    public Boolean AddStoreOwnerToDBCont(String name, String email,String username,String password) {
+        StoreOwner storeOwner = new StoreOwner(name,email,username,password);
+        system.storeOwners.add(storeOwner);
+        return true;
     }
 
-    /**
-     * @return
-     */
-    public Boolean RemoveStoreOwnerToDBCont(String name,String id,String email,String password) {
-        // TODO implement here
-        return null;
+    public Boolean RemoveStoreOwnerToDBCont(String username,String email) {
+        for (StoreOwner storeOwner : system.storeOwners)
+        {
+            if(storeOwner.getUsername() == username && storeOwner.getEmail()==email)
+            {
+                system.storeOwners.remove(storeOwner);
+                return true;
+            }
+        }
+        return false;
     }
 
-    /**
-     * @return
-     */
     public Boolean UpdateStoreOwnerNameToDBCont(String name) {
-        // TODO implement here
-        return null;
+
+        for (StoreOwner storeOwner : system.storeOwners)
+        {
+            if(storeOwner.getName() == so.getName())
+            {
+                storeOwner.setName(name);
+                return true;
+            }
+        }
+        return false;
     }
 
-    /**
-     * @return
-     */
-    public Boolean VerifyCont(String Address) {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
     public Boolean UpdateStoreOwnerPasswordToDBCont(String password) {
-        // TODO implement here
+        for (StoreOwner storeOwner : system.storeOwners)
+        {
+            if(storeOwner.getPassword() == so.getPassword())
+            {
+                storeOwner.setPassword(password);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Boolean VerifyCont(String Address) {
+
         return null;
     }
 

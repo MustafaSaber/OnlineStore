@@ -1,7 +1,7 @@
 
 package A2Z;
 
-import static A2Z.System.brands;
+import static A2Z.system.brands;
 
 public class BrandController {
     private Brand myBrand;

@@ -1,39 +1,42 @@
 package A2Z;
 
-import java.util.*;
-
-/**
- * 
- */
 public class Model {
+    private String modelID;
+    private String name;
+    private Brand myBrand;
 
-    /**
-     * Default constructor
-     */
-    public Model() {
+    public Model(){
+
     }
 
-    /**
-     * 
-     */
-    private String modelID;
+    public Model(String modelID, String name, Brand myBrand) {
+        this.modelID = modelID;
+        this.name = name;
+        this.myBrand = myBrand;
+    }
 
-    /**
-     * 
-     */
-    private String name;
+    public String getModelID() {
+        return modelID;
+    }
 
-    /**
-     * 
-     */
-    private Brand brand;
+    public void setModelID(String modelID) {
+        this.modelID = modelID;
+    }
 
-    /**
-     * 
-     */
-    private int views;
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public Brand getMyBrand() {
+        return myBrand;
+    }
 
+    public void setMyBrand(Brand myBrand) {
+        this.myBrand = myBrand;
+    }
 
 }
