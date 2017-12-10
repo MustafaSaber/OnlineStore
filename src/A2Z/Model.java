@@ -6,7 +6,7 @@ public class Model {
     private Brand myBrand;
     private int view;
 
-    public Model(){
+    public Model(String id, String name, Brand b, int v){
         view = 0;
     }
 

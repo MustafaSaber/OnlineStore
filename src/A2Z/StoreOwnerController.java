@@ -38,7 +38,7 @@ public class StoreOwnerController
          system.suggestBrands.add(brand);
     }
 
-    public void ViewStat1() //number of views of each model in a store
+    public void NumberOfViewsForEachProduct() //number of views of each model in a store
     {
         for (Store store : so.getStores())
         {
@@ -48,7 +48,7 @@ public class StoreOwnerController
             }
         }
     }
-    public void ViewStat2() //	Get the most viewed product in a store
+    public void MostViewiedProductInEachStore() //	Get the most viewed product in a store
     {
         int mostViews = 0;
         String modelName = "";
