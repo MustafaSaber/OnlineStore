@@ -1,38 +1,40 @@
 package A2Z;
 
-import java.util.*;
-
-/**
- * 
- */
 public class ModeController {
+    private Model model;
 
-    /**
-     * Default constructor
-     */
-    public ModeController() {
+    public ModeController(){
+
     }
 
-    /**
-     * 
-     */
-    private Model m;
-
-
-    /**
-     * @return
-     */
-    public Boolean AddModelToDBCont( String name ,String id ,Brand brand) {
-        // TODO implement here
-        return null;
+    public ModeController(Model model) {
+        this.model = model;
     }
 
-    /**
-     * @return
-     */
-    public Boolean RemoveModelFromDBCont(String id, String name, Brand b) {
-        // TODO implement here
-        return null;
+    public Model getModel() {
+        return model;
+    }
+
+    public void setModel(Model model) {
+        this.model = model;
+    }
+
+    public boolean AddModelToDB(Model myModel){
+        boolean flag = true;
+
+        return flag;
+    }
+
+    public boolean RemoveModelFromDB(String modelName){
+        boolean flag = true;
+
+        return flag;
+    }
+
+    public boolean UpdateModelDB(String modelName){
+        boolean flag = true;
+
+        return flag;
     }
 
 }
