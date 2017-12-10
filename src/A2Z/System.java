@@ -12,5 +12,4 @@ public class system {
     static ArrayList<Brand> suggestBrands  = new ArrayList<>();
     static ArrayList<Model> suggestModels  = new ArrayList<>();
     static StoreController sc = new StoreController();
-
 }
