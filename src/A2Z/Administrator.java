@@ -18,5 +18,4 @@ public class Administrator extends User {
         super();
     }
 
-
 }
