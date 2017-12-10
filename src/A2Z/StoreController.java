@@ -1,6 +1,7 @@
 package A2Z;
 import static A2Z.system.stores;
-public class StoreController {
+public class StoreController
+{
     private Store myStore;
 
     public StoreController(){}

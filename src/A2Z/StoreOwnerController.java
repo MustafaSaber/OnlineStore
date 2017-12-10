@@ -43,7 +43,7 @@ public class StoreOwnerController
         {
             for(Product p : store.getProducts())
             {
-                System.out.println("Product: ");
+               System.out.println("Product: "+ p.getModel().getName()+" >> "+  p.getModel().getViews() );
             }
         }
     }

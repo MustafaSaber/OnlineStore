@@ -4,6 +4,7 @@ public class Model {
     private String modelID;
     private String name;
     private Brand myBrand;
+    private int views;
 
     public Model(){
 
@@ -13,10 +14,20 @@ public class Model {
         this.modelID = modelID;
         this.name = name;
         this.myBrand = myBrand;
+        views = 0;
+    }
+
+    public int getViews() {
+        return views;
+    }
+
+    public void setViews(int views) {
+        this.views = views;
     }
 
     public String getModelID() {
         return modelID;
+
     }
 
     public void setModelID(String modelID) {
