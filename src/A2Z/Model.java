@@ -7,7 +7,7 @@ public class Model {
     private int view;
 
     public Model(){
-        views = 0;
+        view = 0;
     }
 
     public Model(String modelID, String name, Brand myBrand, int view) {
