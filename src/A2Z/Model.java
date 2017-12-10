@@ -13,8 +13,16 @@ public class Model {
     public Model() {
     }
 
+    public Model(String modelID, String name, Brand brand) {
+        this.modelID = modelID;
+        this.name = name;
+        this.brand = brand;
+        views = 0;
+    }
+
     /**
-     * 
+     *
+
      */
     private String modelID;
 
