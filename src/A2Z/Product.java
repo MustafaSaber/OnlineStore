@@ -85,10 +85,6 @@ public class Product {
     }
 
 
-
-    /**
-     * @return
-     */
     public void printInfo(Product p) {
         // TODO implement here
     }
