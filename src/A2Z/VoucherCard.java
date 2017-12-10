@@ -7,6 +7,10 @@ public class VoucherCard {
     private Date expiryDate;
     private String voucherID;
 
+    public VoucherCard(){
+
+    }
+
     public VoucherCard(double value, Date expiryDate, String voucherID) {
         this.value = value;
         this.expiryDate = expiryDate;

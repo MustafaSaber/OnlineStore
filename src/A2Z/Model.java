@@ -10,7 +10,7 @@ public class Model {
         view = 0;
     }
 
-    public Model(String modelID, String name, Brand myBrand) {
+    public Model(String modelID, String name, Brand myBrand, int view) {
         this.modelID = modelID;
         this.name = name;
         this.myBrand = myBrand;
