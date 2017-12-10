@@ -1,7 +1,9 @@
 package A2Z;
-
 import java.util.Vector;
 
+/**
+ * Created by lenovo on 12/7/2017.
+ */
 public class Brand {
     private String Name;
     private String BrandID;

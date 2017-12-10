@@ -1,30 +1,30 @@
 package A2Z;
 
-import A2Z.StoreOwner;
+import A2Z.Card;
+import A2Z.Cart;
 
 /**
  * 
  */
-public class StoreOwnerController {
+public class CartController {
 
     /**
      * Default constructor
      */
-    public StoreOwnerController() {
+    public CartController() {
     }
 
     /**
      * 
      */
-    private StoreOwner so;
-
-
+    private Cart cart;
 
 
     /**
+     * @param
      * @return
      */
-    public Boolean AddStoreCont(String id,String name) {
+    public Boolean AddToCartCont(Product prouduct ) {
         // TODO implement here
         return null;
     }
@@ -32,7 +32,7 @@ public class StoreOwnerController {
     /**
      * @return
      */
-    public Boolean RemoveStoreCont(String id,String name) {
+    public Boolean RemoveFromCartCont() {
         // TODO implement here
         return null;
     }
@@ -40,30 +40,46 @@ public class StoreOwnerController {
     /**
      * @return
      */
-    public void SuggestProductCont(String name,String id,Brand b) {
+    public double GetTotalPriceCont() {
         // TODO implement here
-
+        return 0.0d;
     }
 
     /**
      * @return
      */
-    public void SuggestBrandCont(String id,String name) {
+    public boolean CheckOutCont() {
+        // TODO implement here
+        return false;
+    }
+
+    /**
+     * @return
+     */
+    public boolean PayByCardCont() {
+        // TODO implement here
+        return false;
+    }
+
+    /**
+     * @return
+     */
+    public boolean PayOnDeliveryCont() {
+        // TODO implement here
+        return false;
+    }
+
+    /**
+     * @return
+     */
+    public void ShowItemsCont() {
         // TODO implement here
     }
 
     /**
      * @return
      */
-    public String ViewStatCont() {
-        // TODO implement here
-        return "";
-    }
-
-    /**
-     * @return
-     */
-    public Boolean AddStoreOwnerToDBCont(String name,String id ,String email,String password) {
+    public Boolean AddVoucherCont() {
         // TODO implement here
         return null;
     }
@@ -71,33 +87,17 @@ public class StoreOwnerController {
     /**
      * @return
      */
-    public Boolean RemoveStoreOwnerToDBCont(String name,String id,String email,String password) {
+    public Boolean RemoveVoucherCont() {
         // TODO implement here
         return null;
     }
 
     /**
+     * @param CardID 
      * @return
      */
-    public Boolean UpdateStoreOwnerNameToDBCont(String name) {
+    public void VerifyData(Card CardID) {
         // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    public Boolean VerifyCont(String Address) {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    public Boolean UpdateStoreOwnerPasswordToDBCont(String password) {
-        // TODO implement here
-        return null;
     }
 
 }

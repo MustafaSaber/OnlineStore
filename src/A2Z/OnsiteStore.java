@@ -1,9 +1,6 @@
 package A2Z;
 
-/**
- * Created by Nardeen on 08-Dec-17.
- */
-public class OnsiteStore extends Store{
+public class OnsiteStore extends Store {
     private String Address;
 
     public OnsiteStore(String link) {
@@ -18,9 +15,4 @@ public class OnsiteStore extends Store{
         Address = address;
     }
 
-    public boolean Verify(){
-        boolean flag=false;
-        if(Address!=""){flag=true;}
-        return flag;
-    }
 }

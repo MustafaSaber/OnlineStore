@@ -5,7 +5,6 @@ import java.util.*;
 /**
  * 
  */
-public class Vadmin {
-
+public class VregisterSO {
 
 }
