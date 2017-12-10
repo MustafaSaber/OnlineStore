@@ -108,10 +108,4 @@ public class StoreOwnerController
         return false;
     }
 
-    public Boolean VerifyCont(String Address) {
-        if(Address.equals(" "))
-            return false;
-        return true;
-    }
-
 }
