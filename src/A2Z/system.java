@@ -2,7 +2,7 @@ package A2Z;
 import java.util.*;
 
 
-public class System {
+public class system {
     static ArrayList<NormalCustomer> normalCustomers = new ArrayList<>();
     static ArrayList<Administrator> administrators = new ArrayList<>();
     static ArrayList<StoreOwner> storeOwners = new ArrayList<>();

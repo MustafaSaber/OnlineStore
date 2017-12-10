@@ -20,7 +20,6 @@ public class AdministratorController {
 
 
     /**
-     * @param Name
      * @return
      */
     public void AddBrandCont() {
@@ -96,8 +95,19 @@ public class AdministratorController {
      * @param
      * @return
      */
-    public void ViewSuggCont() {
-        // TODO implement here
+    public String ViewSuggbrandCont() {
+        String s = "";
+        for (Brand b : system.brands)
+            s += b.getName()+"\n";
+        return s;
+    }
+
+
+    public String ViewSuggModelsCont() {
+        String s = "";
+        for (Model m : system.models)
+            s+=m.getName()+ " " + m.getMyBrand().getName() +"\n";
+        return s;
     }
 
 
