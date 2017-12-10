@@ -38,7 +38,8 @@ public class StoreOwnerController
          system.suggestBrands.add(brand);
     }
 
-    public void ViewStatCont() {
+    public void ViewStat1() //number of views of each model in a store
+    {
         for (Store store : so.getStores())
         {
             for(Product p : store.getProducts())
@@ -46,6 +47,22 @@ public class StoreOwnerController
                System.out.println("Product: "+ p.getModel().getName()+" >> "+  p.getModel().getView() );
             }
         }
+    }
+    public void ViewStat2() //	Get the most viewed product in a store
+    {
+        int mostViews = 0;
+        String modelName = "";
+        for (Store store : so.getStores())
+        {
+            for(Product p : store.getProducts())
+            {
+                 modelName = p.getModel().getName();
+                 if(mostViews < (p.getModel().getView()))
+                     mostViews = p.getModel().getView();
+
+            }
+        }
+        System.out.println("The most viewed product: "+ modelName+" >> "+ mostViews);
     }
 
     public Boolean AddStoreOwnerToDBCont(String name, String email,String username,String password) {
@@ -92,7 +109,8 @@ public class StoreOwnerController
     }
 
     public Boolean VerifyCont(String Address) {
-
+        if(Address.equals(" "))
+            return false;
         return true;
     }
 
