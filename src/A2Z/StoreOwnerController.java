@@ -29,8 +29,8 @@ public class StoreOwnerController
         return false;
     }
 
-    public void SuggestModelCont(String name,String id,Brand b) {
-         Model model = new Model(id,name,b);
+    public void SuggestModelCont(String name,String id,Brand b, int v) {
+         Model model = new Model(id,name,b,v);
          system.suggestModels.add(model);
     }
     public void SuggestBrandCont(String id,String name) {
