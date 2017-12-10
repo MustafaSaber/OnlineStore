@@ -3,6 +3,10 @@ package A2Z;
 public class CreditCard {
     private String cardID;
 
+    public CreditCard(){
+
+    }
+
     public CreditCard(String cardID) {
         this.cardID = cardID;
     }
