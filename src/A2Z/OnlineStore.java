@@ -1,7 +1,7 @@
 package A2Z;
 
 /**
- * Created by Nardeen on 08-Dec-17.
+ * Created by lenovo on 12/7/2017.
  */
 public class OnlineStore extends Store {
     private String Link;
@@ -18,9 +18,4 @@ public class OnlineStore extends Store {
         Link = link;
     }
 
-    public boolean Verify() {
-        boolean flag=false;
-        if(Link!=""){flag=true;}
-        return flag;
-    }
 }

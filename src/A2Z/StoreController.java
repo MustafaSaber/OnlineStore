@@ -1,14 +1,5 @@
 package A2Z;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.util.Scanner;
-import java.util.Vector;
-
-/**
- * Created by Nardeen on 08-Dec-17.
- */
+import static A2Z.System.stores;
 public class StoreController {
     private Store myStore;
 
@@ -28,81 +19,39 @@ public class StoreController {
 
     public boolean AddStoreToDB(String name, String storeID){
         boolean flag=true;
-        File StoreFile = new File("StoreFile.txt");
-        Vector<Store> myStores = new Vector<>();
-        Scanner S = null;
-        try {
-            S = new Scanner(StoreFile);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        while (S.hasNextLine()){
-            String[] words=(S.nextLine()).split("\\s+");
-            Store TempBrand=new Store();
-            TempBrand.setName(words[0]);
-            TempBrand.setStoreID(words[1]);
-            myStores.add(TempBrand);
-        }
-        for (int i=0;i<myStores.size();i++){
-            if(myStores.elementAt(i).getName().equals(name) && myStores.elementAt(i).getStoreID().equals(storeID)){
+
+        for (int i=0;i<stores.size();i++){
+            if(stores.get(i).getName().equals(name) && stores.get(i).getStoreID().equals(storeID)){
                 flag=false;
                 break;
             }
         }
         if(flag==true){
-            PrintWriter P=null;
-            try {
-                P = new PrintWriter(StoreFile);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-            P.append(name+" "+storeID);
-            P.close();
+            Store StoreObj=new Store();
+            StoreObj.setName(name);
+            StoreObj.setStoreID(storeID);
+            stores.add(StoreObj);
         }
         return flag;
     }
 
     public boolean RemoveStoreToDB(String name, String storeID){
         boolean flag=false;
-        File StoreFile = new File("StoreFile.txt");
-        Vector<Store> myStores = new Vector<>();
-        Scanner S = null;
-        PrintWriter P = null;
-        try {
-            P = new PrintWriter(StoreFile);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        try {
-            S = new Scanner(StoreFile);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        while (S.hasNextLine()){
-            String[] words=(S.nextLine()).split("\\s+");
-            Store TempBrand=new Store();
-            TempBrand.setName(words[0]);
-            TempBrand.setStoreID(words[1]);
-            myStores.add(TempBrand);
-        }
-        for (int i=0;i<myStores.size();i++){
-            if(myStores.elementAt(i).getName().equals(name) && myStores.elementAt(i).getStoreID().equals(storeID)){
-                myStores.remove(i);
+
+        for (int i=0;i<stores.size();i++){
+            if(stores.get(i).getName().equals(name) && stores.get(i).getStoreID().equals(storeID)){
+                stores.remove(i);
                 flag=true;
                 break;
             }
         }
-        for (int i=0;i<myStores.size();i++){
-            P.println(myStores.elementAt(i).getName()+" "+myStores.elementAt(i).getStoreID());
-        }
-        P.close();
 
         return flag;
     }
 
-    public void UpdateStoreToDB(String name,String storeID,String newName,String newStoreID){
+    public void UpdateStoreToDB(String name,String storeID,String newName){
         RemoveStoreToDB(name,storeID);
-        AddStoreToDB(newName,newStoreID);
+        AddStoreToDB(newName,storeID);
     }
 
     public boolean Verify(){return false;}

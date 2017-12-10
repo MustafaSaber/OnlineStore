@@ -1,9 +1,11 @@
 package A2Z;
 
+import A2Z.Product;
+
 import java.util.Vector;
 
 /**
- * Created by Nardeen on 08-Dec-17.
+ * Created by lenovo on 12/7/2017.
  */
 public class Store {
     private String Name;

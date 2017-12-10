@@ -5,12 +5,12 @@ import java.util.*;
 /**
  * 
  */
-public class Administrator extends User {
+public class Payment {
 
     /**
      * Default constructor
      */
-    public Administrator() {
+    public Payment() {
     }
 
 

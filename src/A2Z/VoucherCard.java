@@ -5,33 +5,28 @@ import java.util.*;
 /**
  * 
  */
-public class Model {
+public class VoucherCard {
 
     /**
      * Default constructor
      */
-    public Model() {
+    public VoucherCard() {
     }
 
     /**
      * 
      */
-    private String modelID;
+    private double amount;
 
     /**
      * 
      */
-    private String name;
+    private Date ExpireDate;
 
     /**
      * 
      */
-    private Brand brand;
-
-    /**
-     * 
-     */
-    private int views;
+    private String VoucherID;
 
 
 
