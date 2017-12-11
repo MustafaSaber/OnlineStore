@@ -6,16 +6,17 @@ public class Model {
     private Brand myBrand;
     private int view;
 
-    public Model(String id, String name, Brand b, int v){
+    public Model(){
         view = 0;
     }
 
-    public Model(String modelID, String name, Brand myBrand, int view) {
+    public Model(String modelID, String name, Brand myBrand) {
         this.modelID = modelID;
         this.name = name;
         this.myBrand = myBrand;
-        this.view = view;
+        this.view = 0;
     }
+
 
     public String getModelID() {
         return modelID;
