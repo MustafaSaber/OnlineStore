@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="349bb13a-1aac-4d9b-a840-cfa82671885f" name="Default" comment="">
+    <list default="true" id="349bb13a-1aac-4d9b-a840-cfa82671885f" name="Default" comment="add attribute">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/A2Z/OnDelivery.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A2Z/CreditCard.java" afterPath="$PROJECT_DIR$/src/A2Z/CreditCard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A2Z/OnDelivery.java" afterPath="$PROJECT_DIR$/src/A2Z/OnDelivery.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VoucherCardController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VoucherCardController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/A2Z/VoucherCardController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="354">
@@ -109,21 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/A2Z/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="475">
               <caret line="31" column="208" lean-forward="false" selection-start-line="31" selection-start-column="208" selection-end-line="31" selection-end-column="208" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OnDelivery.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/A2Z/OnDelivery.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -507,7 +496,7 @@
       <workItem from="1512733009410" duration="26000" />
       <workItem from="1512733090500" duration="158000" />
       <workItem from="1512733504823" duration="839000" />
-      <workItem from="1512985762471" duration="6823000" />
+      <workItem from="1512985762471" duration="7581000" />
     </task>
     <task id="LOCAL-00001" summary="nardeen">
       <created>1512751941437</created>
@@ -635,11 +624,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513024452525</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add attribute">
+      <created>1513024496902</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1513024496902</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8708000" />
+    <option name="totallyTimeSpent" value="9466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -722,7 +718,8 @@
     <MESSAGE value="Finish product class, add productCont to system" />
     <MESSAGE value="implement some cart functions." />
     <MESSAGE value="Complete cart functions remove payment class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete cart functions remove payment class" />
+    <MESSAGE value="add attribute" />
+    <option name="LAST_COMMIT_MESSAGE" value="add attribute" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -858,22 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A2Z/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="31" column="208" lean-forward="false" selection-start-line="31" selection-start-column="208" selection-end-line="31" selection-end-column="208" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/A2Z/OnDelivery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/A2Z/StoreController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
@@ -991,6 +972,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
           <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A2Z/OnDelivery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A2Z/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="31" column="208" lean-forward="false" selection-start-line="31" selection-start-column="208" selection-end-line="31" selection-end-column="208" />
           <folding />
         </state>
       </provider>
