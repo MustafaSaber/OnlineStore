@@ -2,6 +2,7 @@ package A2Z;
 
 import A2Z.Card;
 import A2Z.Cart;
+import A2Z.system;
 
 /**
  * 
@@ -25,24 +26,30 @@ public class CartController {
      * @return
      */
     public Boolean AddToCartCont(Product prouduct ) {
-        // TODO implement here
-        return null;
+        return cart.getProducts().add(prouduct);
     }
 
     /**
      * @return
      */
-    public Boolean RemoveFromCartCont() {
-        // TODO implement here
-        return null;
+    public Boolean RemoveFromCartCont(Product p) {
+        for (Product curr : cart.getProducts()){
+            if(curr.getProductID()==p.getProductID())
+            {
+                cart.getProducts().remove(p);
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
      * @return
      */
     public double GetTotalPriceCont() {
-        // TODO implement here
-        return 0.0d;
+        double tp = 0;
+        for(Product curr: cart.getProducts()) tp+=curr.getPrice();
+        return tp;
     }
 
     /**
@@ -73,23 +80,33 @@ public class CartController {
      * @return
      */
     public void ShowItemsCont() {
-        // TODO implement here
+        for(Product curr: cart.getProducts()){
+            system.productcon.PrintInfoOnly(curr);
+        }
     }
 
     /**
      * @return
      */
-    public Boolean AddVoucherCont() {
-        // TODO implement here
-        return null;
+    public Boolean AddVoucherCont(VoucherCard vc) {
+        if(cart.getVouchercard()==null) {
+            cart.setVouchercard(vc);
+            return true;
+        }
+        else {
+            cart.getVouchercard().setValue(cart.getVouchercard().getValue()+vc.getValue());
+            return true;
+        }
     }
 
     /**
      * @return
      */
     public Boolean RemoveVoucherCont() {
-        // TODO implement here
-        return null;
+        if(cart.getVouchercard()==null)
+            return false;
+        cart.setVouchercard(null);
+        return true;
     }
 
     /**

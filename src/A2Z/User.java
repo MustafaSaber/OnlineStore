@@ -3,34 +3,58 @@ package A2Z;
 import java.util.*;
 
 /**
- * 
+ *
  */
 public class User {
+    private String name;
+    private String Email;
+    private String username;
+    private String password;
 
-    /**
-     * Default constructor
-     */
     public User() {
     }
 
-    /**
-     * 
-     */
-    private String name;
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
 
-    /**
-     * 
-     */
-    private String Email;
+    public User(String name, String email, String username, String password) {
+        this.name = name;
+        Email = email;
+        this.username = username;
+        this.password = password;
+    }
 
-    /**
-     * 
-     */
-    private String username;
+    public String getName() {
+        return name;
+    }
 
-    /**
-     * 
-     */
-    private String password;
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public String getEmail() {
+        return Email;
+    }
+
+    private void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    private void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

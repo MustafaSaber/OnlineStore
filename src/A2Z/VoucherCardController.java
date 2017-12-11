@@ -1,41 +1,60 @@
 package A2Z;
+import java.util.Date;
 
-import java.util.*;
+import static A2Z.system.voucherCards;
 
-/**
- * 
- */
+
 public class VoucherCardController {
+    private VoucherCard voucherCard;
 
-    /**
-     * Default constructor
-     */
-    public VoucherCardController() {
+    public boolean AddVoucherToDB(double vouchValue, Date exDate, String vouchID){
+        boolean flag = true;
+
+        for (int i = 0; i < voucherCards.size(); i++){
+            if(voucherCards.get(i).getValue() == vouchValue && voucherCards.get(i).getExpiryDate().equals(exDate) && voucherCards.get(i).getVoucherID().equals(vouchID)){
+                flag=false;
+                break;
+            }
+        }
+
+        if(flag == true){
+            VoucherCard myVoucher = new VoucherCard();
+            myVoucher.setValue(vouchValue);
+            myVoucher.setExpiryDate(exDate);
+            myVoucher.setVoucherID(vouchID);
+            voucherCards.add(myVoucher);
+        }
+
+        return flag;
     }
 
+    public boolean RemoveVoucherFromDB(double vouchValue, Date exDate, String vouchID){
+        boolean flag = false;
 
-    /**
-     * @return
-     */
-    public Boolean AddVoucherToDB() {
-        // TODO implement here
-        return null;
+        for (int i = 0; i < voucherCards.size(); i++){
+            if(voucherCards.get(i).getValue() == vouchValue && voucherCards.get(i).getExpiryDate().equals(exDate) && voucherCards.get(i).getVoucherID().equals(vouchID)){
+                voucherCards.remove(i);
+                flag=true;
+                break;
+            }
+        }
+
+        return flag;
     }
 
-    /**
-     * @return
-     */
-    public Boolean RemoveVoucherFromDB() {
-        // TODO implement here
-        return null;
-    }
+    public boolean UpdateVoucherDB(double vouchValue, Date exDate, String vouchID){
+        boolean flag1;
+        boolean flag2;
+        boolean flag = true;
 
-    /**
-     * @return
-     */
-    public Boolean UpdateVoucherInDB(String id , Date exp ,double amo) {
-        // TODO implement here
-        return null;
+        flag1 = RemoveVoucherFromDB( vouchValue,  exDate, vouchID);
+        flag2 = AddVoucherToDB(vouchValue,  exDate,  vouchID);
+
+        if(flag1 == false || flag2 == false){
+            flag = false;
+        }
+
+        return flag;
     }
 
 }

@@ -1,103 +1,110 @@
 package A2Z;
 
-import A2Z.StoreOwner;
 
-/**
- * 
- */
-public class StoreOwnerController {
 
-    /**
-     * Default constructor
-     */
+public class StoreOwnerController
+{
+    private StoreOwner so;
+
     public StoreOwnerController() {
     }
 
-    /**
-     * 
-     */
-    private StoreOwner so;
-
-
-
-
-    /**
-     * @return
-     */
     public Boolean AddStoreCont(String id,String name) {
-        // TODO implement here
-        return null;
+        Store store = new Store(name,id);
+        so.getStores().add(store);
+        system.sc.AddStoreToDB(name,id);
+        return true;
     }
 
-    /**
-     * @return
-     */
     public Boolean RemoveStoreCont(String id,String name) {
-        // TODO implement here
-        return null;
+        system.sc.RemoveStoreToDB(name,id);
+        for (Store store : so.getStores())
+        {
+            if(store.getStoreID().equals(id) && store.getName().equals(name))
+            {
+                so.getStores().remove(store);
+                return true;
+            }
+        }
+        return false;
     }
 
-    /**
-     * @return
-     */
-    public void SuggestProductCont(String name,String id,Brand b) {
-        // TODO implement here
-
+    public void SuggestModelCont(String name,String id,Brand b) {
+         Model model = new Model(id,name,b);
+         system.suggestModels.add(model);
     }
-
-    /**
-     * @return
-     */
     public void SuggestBrandCont(String id,String name) {
-        // TODO implement here
+         Brand brand = new Brand(name,id);
+         system.suggestBrands.add(brand);
     }
 
-    /**
-     * @return
-     */
-    public String ViewStatCont() {
-        // TODO implement here
-        return "";
+    public void NumberOfViewsForEachProduct() //number of views of each model in a store
+    {
+        for (Store store : so.getStores())
+        {
+            for(Product p : store.getProducts()) {
+                System.out.println("Product: " + p.getModel().getName() + " >> " + p.getModel().getView());
+            }
+        }
+    }
+    public void MostViewiedProductInEachStore() //	Get the most viewed product in a store
+    {
+        int mostViews = 0;
+        String modelName = "";
+        for (Store store : so.getStores())
+        {
+            for(Product p : store.getProducts())
+            {
+                 modelName = p.getModel().getName();
+                 if(mostViews < (p.getModel().getView()))
+                     mostViews = p.getModel().getView();
+
+            }
+        }
+        System.out.println("The most viewed product: "+ modelName+" >> "+ mostViews);
     }
 
-    /**
-     * @return
-     */
-    public Boolean AddStoreOwnerToDBCont(String name,String id ,String email,String password) {
-        // TODO implement here
-        return null;
+    public Boolean AddStoreOwnerToDBCont(String name, String email,String username,String password) {
+        StoreOwner storeOwner = new StoreOwner(name,email,username,password);
+        system.storeOwners.add(storeOwner);
+        return true;
     }
 
-    /**
-     * @return
-     */
-    public Boolean RemoveStoreOwnerToDBCont(String name,String id,String email,String password) {
-        // TODO implement here
-        return null;
+    public Boolean RemoveStoreOwnerToDBCont(String username,String email) {
+        for (StoreOwner storeOwner : system.storeOwners)
+        {
+            if(storeOwner.getUsername().equals(username) && storeOwner.getEmail().equals(email))
+            {
+                system.storeOwners.remove(storeOwner);
+                return true;
+            }
+        }
+        return false;
     }
 
-    /**
-     * @return
-     */
     public Boolean UpdateStoreOwnerNameToDBCont(String name) {
-        // TODO implement here
-        return null;
+
+        for (StoreOwner storeOwner : system.storeOwners)
+        {
+            if(storeOwner.getName().equals(so.getName()))
+            {
+                storeOwner.setName(name);
+                return true;
+            }
+        }
+        return false;
     }
 
-    /**
-     * @return
-     */
-    public Boolean VerifyCont(String Address) {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
     public Boolean UpdateStoreOwnerPasswordToDBCont(String password) {
-        // TODO implement here
-        return null;
+        for (StoreOwner storeOwner : system.storeOwners)
+        {
+            if(storeOwner.getPassword().equals(so.getPassword()))
+            {
+                storeOwner.setPassword(password);
+                return true;
+            }
+        }
+        return false;
     }
 
 }

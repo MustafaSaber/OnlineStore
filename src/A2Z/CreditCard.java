@@ -1,24 +1,22 @@
 package A2Z;
 
-import java.util.*;
-
-/**
- * 
- */
-public class CreditCard extends Payment {
-
-    /**
-     * Default constructor
-     */
-    public CreditCard() {
-    }
-
-    /**
-     * 
-     */
+public class CreditCard {
     private String cardID;
 
+    public CreditCard(){
 
+    }
 
+    public CreditCard(String cardID) {
+        this.cardID = cardID;
+    }
+
+    public String getCardID() {
+        return cardID;
+    }
+
+    public void setCardID(String cardID) {
+        this.cardID = cardID;
+    }
 
 }
