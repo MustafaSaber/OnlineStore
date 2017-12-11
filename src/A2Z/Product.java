@@ -85,15 +85,4 @@ public class Product {
     }
 
 
-    public void printInfo(Product p) {
-        // TODO implement here
-    }
-
-    /**
-     * @return
-     */
-    public void viewProduct() {
-        // TODO implement here
-    }
-
 }
