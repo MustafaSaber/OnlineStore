@@ -2,6 +2,15 @@ package A2Z;
 
 public class CreditCard {
     private String cardID;
+    private double MyMoney;
+
+    public double getMyMoney() {
+        return MyMoney;
+    }
+
+    public void setMyMoney(double myMoney) {
+        MyMoney = myMoney;
+    }
 
     public CreditCard(){
 
