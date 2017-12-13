@@ -4,7 +4,7 @@ package A2Z;
 
 public class StoreOwnerController
 {
-    private StoreOwner so;
+    private StoreOwner so = new StoreOwner();
 
     public StoreOwnerController() {
     }

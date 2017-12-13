@@ -10,7 +10,7 @@ import java.util.Vector;
 public class Store {
     private String Name;
     private String StoreID;
-    private Vector<Product> Products;
+    private Vector<Product> Products = new Vector<Product>();
 
     public Store(){
         Name="";
