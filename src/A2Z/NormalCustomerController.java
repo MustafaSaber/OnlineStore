@@ -1,17 +1,11 @@
 package A2Z;
 
-import A2Z.NormalCustomer;
-
-/**
- * 
- */
 public class NormalCustomerController {
 
     /**
      * Default constructor
      */
-    public NormalCustomerController() {
-    }
+    public NormalCustomerController() {}
 
     public NormalCustomerController(NormalCustomer normal) {
 
@@ -26,9 +20,6 @@ public class NormalCustomerController {
         this.normal = normal;
     }
 
-    /**
-     * 
-     */
     public NormalCustomer normal;
 
 

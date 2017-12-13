@@ -1,6 +1,7 @@
 package A2Z;
 
 
+import java.util.Vector;
 
 public class StoreOwnerController
 {
@@ -9,15 +10,16 @@ public class StoreOwnerController
     public StoreOwnerController() {
     }
 
+
     public Boolean AddStoreCont(String id,String name) {
         Store store = new Store(name,id);
         so.getStores().add(store);
-        system.sc.AddStoreToDB(name,id);
+        system.StoreCon.AddStoreToDB(name,id);
         return true;
     }
 
     public Boolean RemoveStoreCont(String id,String name) {
-        system.sc.RemoveStoreToDB(name,id);
+        system.StoreCon.RemoveStoreToDB(name,id);
         for (Store store : so.getStores())
         {
             if(store.getStoreID().equals(id) && store.getName().equals(name))

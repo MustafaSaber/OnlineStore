@@ -8,10 +8,10 @@ import java.util.*;
  * 
  */
 public class StoreOwner extends User {
-    private Vector<Store> stores;
+    private Vector<Store> stores=new Vector<>();
 
     public StoreOwner() {
-        stores = new Vector<Store>();
+
     }
 
     public StoreOwner(String username, String password) {
@@ -20,6 +20,9 @@ public class StoreOwner extends User {
 
     public StoreOwner(String name, String email, String username, String password) {
         super(name, email, username, password);
+    }
+    public String ViewStore(Store s){
+        return s.getName()+s.getStoreID();
     }
 
     public Vector<Store> getStores() {
