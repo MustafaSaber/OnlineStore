@@ -4,6 +4,9 @@ import A2Z.Card;
 import A2Z.Cart;
 import A2Z.system;
 
+import java.util.Date;
+import java.util.Scanner;
+
 /**
  * 
  */
@@ -63,17 +66,40 @@ public class CartController {
     /**
      * @return
      */
-    public boolean PayByCardCont() {
-        // TODO implement here
-        return false;
+    public boolean PayByCreditCont() {
+       double mo =  GetTotalPriceCont();
+        if(cart.getCreditcard().getMyMoney() < mo) {
+            System.out.println("Sorry you don't have enough credit");
+            return false;
+        }
+        else {
+            cart.getCreditcard().setMyMoney(cart.getCreditcard().getMyMoney() - mo);
+            System.out.println("You buyed items successfully!");
+            return true;
+        }
+
+    }
+
+    public boolean PayByVoucherCont() {
+        double mo =  GetTotalPriceCont();
+        Date currdate = new Date();
+        if(cart.getVouchercard().getValue() < mo || cart.getVouchercard().getExpiryDate().after(currdate)) {
+            System.out.println("Sorry you can't use this voucher card to buy this item");
+            return false;
+        }
+        else {
+            cart.getVouchercard().setValue(cart.getVouchercard().getValue() - mo);
+            System.out.println("You buyed items successfully!");
+            return true;
+        }
     }
 
     /**
      * @return
      */
     public boolean PayOnDeliveryCont() {
-        // TODO implement here
-        return false;
+        System.out.println("Your items will be sent to:" + cart.getAddress());
+        return true;
     }
 
     /**
@@ -109,12 +135,5 @@ public class CartController {
         return true;
     }
 
-    /**
-     * @param CardID 
-     * @return
-     */
-    public void VerifyData(Card CardID) {
-        // TODO implement here
-    }
 
 }
