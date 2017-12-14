@@ -2,9 +2,7 @@ package A2Z;
 
 public class NormalCustomer extends User {
     private Cart cart;
-    /**
-     * Default constructor
-     */
+
     public NormalCustomer() {}
 
     public NormalCustomer(String name, String email, String username, String password) {
