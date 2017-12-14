@@ -59,13 +59,14 @@ public class VregisterSO extends JFrame{
                     object = new StoreOwnerRegular(Name.getText(), Email.getText(), Username.getText(), Password.getText());
 
 //                storeOwners.add(object);
-                StoreOwnerController storeOwnerController = new StoreOwnerController();
-                storeOwnerController.AddStoreOwnerToDBCont(object.getName(),object.getEmail(),object.getUsername(),object.getPassword(),!prem.isSelected());
 
-                if(Name.getText()=="" || Email.getText()=="" || Username.getText()=="" || Password.getText()=="" ){
+                System.out.println(Name.getText() + "\n" + Email.getText() + " " + Username.getText() + " " + Password.getText());
+                if(Name.getText().equals("") || Email.getText().equals("") || Username.getText().equals("") || Password.getText().equals("") ){
                     label5.setText(" Registration fail ");}
                 else {
-                    label5.setText(" Registration successful ");}
+                    system.StoreOwnerCon.AddStoreOwnerToDBCont(object.getName(),object.getEmail(),object.getUsername(),object.getPassword(),!prem.isSelected());
+                    label5.setText(" Registration successful ");
+                }
             }
             if(buttonPressed.equals(Login)) {
                 if (system.CheckForStoreOwner(Username.getText())) {
