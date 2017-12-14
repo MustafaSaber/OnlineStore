@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="349bb13a-1aac-4d9b-a840-cfa82671885f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A2Z/View.java" afterPath="$PROJECT_DIR$/src/A2Z/View.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1672,11 +1671,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513206585698</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Repair login problem">
+      <created>1513292854681</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1513292854681</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11266000" />
+    <option name="totallyTimeSpent" value="11299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1781,7 +1787,8 @@
     <MESSAGE value="Complete cart functions remove payment class" />
     <MESSAGE value="add attribute" />
     <MESSAGE value="Resolve errors in cart controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolve errors in cart controller" />
+    <MESSAGE value="Repair login problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repair login problem" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
