@@ -1,14 +1,14 @@
 package A2Z;
 import static A2Z.system.models;
 
-public class ModeController {
+public class ModelController {
     private Model model;
 
-    public ModeController(){
+    public ModelController(){
 
     }
 
-    public ModeController(Model model) {
+    public ModelController(Model model) {
         this.model = model;
     }
 
@@ -42,11 +42,11 @@ public class ModeController {
         return flag;
     }
 
-    public boolean RemoveModelFromDB(String modelName, String modelID, String brandID, String brandName){
+    public boolean RemoveModelFromDB(String modelID) {
         boolean flag = false;
 
         for (int i=0;i<models.size();i++){
-            if(models.get(i).getName().equals(modelName) && models.get(i).getModelID().equals(modelID) && models.get(i).getMyBrand().getBrandID().equals(brandID) && models.get(i).getMyBrand().getName().equals(brandName)){
+            if(models.get(i).getModelID().equals(modelID) ){
                 models.remove(i);
                 flag=true;
                 break;
@@ -56,17 +56,11 @@ public class ModeController {
         return flag;
     }
 
-    public boolean UpdateModelDB(String modelName, String modelID, String brandID, String brandName){
-        boolean flag1;
-        boolean flag2;
-        boolean flag = true;
+    public boolean UpdateModelDB(String oldModelID, String modelID,String modelName, String brandID, String brandName){
+        boolean flag ;
 
-        flag1 = RemoveModelFromDB(modelName, modelID, brandID, brandName);
-        flag2 = AddModelToDB( modelName, modelID, brandID, brandName);
-
-        if(flag1 == false || flag2 == false){
-            flag = false;
-        }
+        flag = RemoveModelFromDB(oldModelID);
+        if(flag){flag = AddModelToDB(  modelID,modelName, brandID, brandName);}
 
         return flag;
     }

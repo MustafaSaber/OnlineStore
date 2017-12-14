@@ -51,8 +51,12 @@ public class BrandController {
 
     }
 
-    public void UpdateBrandToDB(String name,String brandID,String newName){
-        RemoveBrandToDB(name,brandID);
-        AddBrandToDB(newName,brandID);
+    public boolean UpdateBrandToDB(String name,String brandID,String newName){
+        boolean flag;
+        flag=RemoveBrandToDB(name,brandID);
+        if(flag==true){
+           flag= AddBrandToDB(newName,brandID);
+        }
+        return flag;
     }
 }

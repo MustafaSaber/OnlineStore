@@ -50,9 +50,13 @@ public class StoreController
         return flag;
     }
 
-    public void UpdateStoreToDB(String name,String storeID,String newName){
-        RemoveStoreToDB(name,storeID);
-        AddStoreToDB(newName,storeID);
+    public boolean UpdateStoreToDB(String name,String storeID,String newName){
+        boolean flag;
+        flag=RemoveStoreToDB(name,storeID);
+        if(flag==true){
+            flag=AddStoreToDB(newName,storeID);
+        }
+        return flag;
     }
 
     public boolean Verify(){return false;}

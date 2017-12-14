@@ -7,37 +7,20 @@ import java.util.*;
  */
 public class Cart {
 
+    private Vector<Product> products;
+
+    private CreditCard creditcard;
+
+    private String address;
+
+    private VoucherCard Vouchercard;
+
+    private double TotalPrice;
     /**
      * Default constructor
      */
     public Cart() {
     }
-
-    /**
-     * 
-     */
-    private Vector<Product> products;
-
-    /**
-     * 
-     */
-    private CreditCard creditcard;
-
-    /**
-     * 
-     */
-
-    private String address;
-
-    /**
-     * 
-     */
-    private VoucherCard Vouchercard;
-
-    /**
-     * 
-     */
-    private double TotalPrice;
 
     public Cart(String address, double totalPrice) {
         this.products = new Vector<>();

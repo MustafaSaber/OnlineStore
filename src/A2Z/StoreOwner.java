@@ -8,7 +8,7 @@ import java.util.*;
  * 
  */
 public class StoreOwner extends User {
-    private Vector<Store> stores = new Vector<Store>();
+    private Vector<Store> stores;
 
     public StoreOwner() {
         stores = new Vector<Store>();

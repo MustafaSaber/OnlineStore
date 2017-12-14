@@ -2,23 +2,22 @@ package A2Z;
 
 public class CreditCard {
     private String cardID;
-    private double myMoney;
+    private double MyMoney;
 
     public double getMyMoney() {
-        return myMoney;
+        return MyMoney;
     }
 
     public void setMyMoney(double myMoney) {
-        this.myMoney = myMoney;
+        MyMoney = myMoney;
     }
 
     public CreditCard(){
 
     }
 
-    public CreditCard(String cardID , double mo) {
+    public CreditCard(String cardID) {
         this.cardID = cardID;
-        myMoney = mo;
     }
 
     public String getCardID() {

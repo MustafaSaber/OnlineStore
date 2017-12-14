@@ -107,7 +107,7 @@ public class CartController {
      */
     public void ShowItemsCont() {
         for(Product curr: cart.getProducts()){
-            system.productcon.PrintInfoOnly(curr);
+            system.ProductCon.PrintInfoOnly(curr);
         }
     }
 

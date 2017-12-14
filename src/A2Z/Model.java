@@ -37,6 +37,9 @@ public class Model {
     public Brand getMyBrand() {
         return myBrand;
     }
+    public String getMyBrandIfo() {
+        return myBrand.getBrandID()+" "+myBrand.getName();
+    }
 
     public void setMyBrand(Brand myBrand) {
         this.myBrand = myBrand;

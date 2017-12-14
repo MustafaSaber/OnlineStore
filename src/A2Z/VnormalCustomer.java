@@ -4,22 +4,23 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Vector;
 
 import static A2Z.system.*;
 
-public class Vcart extends JFrame{
-
-    JButton Back = new JButton("Back");
-    JButton CheckOut = new JButton("CheckOut");
-    JButton TotalPrice = new JButton("TotalPrice");
+public class VnormalCustomer extends JFrame{
+    Vector<JLabel> Product=new Vector<>();
+    Vector<JButton> AddToCart=new Vector<>();
+    Vector<JButton> ViewModel=new Vector<>();
+    JButton MyCart = new JButton("MyCart");
+    JButton Logout = new JButton("Logout");
     NormalCustomer myCustomer=new NormalCustomer();
 
-    public Vcart(String UserName){
-        setTitle("** Cart View **");
+    public VnormalCustomer(String UserName){
+        setTitle("** Normal Customer View **");
         setSize(600,600);
-        Back.addActionListener(new action());
-        CheckOut.addActionListener(new action());
-        TotalPrice.addActionListener(new action());
+        Logout.addActionListener(new action());
+        MyCart.addActionListener(new action());
         getContentPane().setLayout(new FlowLayout());
         for (int i=0;i<normalCustomers.size();i++){
             if(normalCustomers.get(i).getUsername().equals(UserName)){
@@ -27,9 +28,8 @@ public class Vcart extends JFrame{
                 break;
             }
         }
-        getContentPane().add(TotalPrice);
-        getContentPane().add(CheckOut);
-        getContentPane().add(Back);
+        getContentPane().add(MyCart);
+        getContentPane().add(Logout);
 
 
     }
@@ -39,16 +39,15 @@ public class Vcart extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e) {
             Object buttonPressed=e.getSource();
-            if(buttonPressed.equals(TotalPrice)){
-
-            }
-            if(buttonPressed.equals(CheckOut)){
-                Vpay object=new Vpay(myCustomer.getUsername());
+            if(buttonPressed.equals(MyCart)){
+                Vcart object=new Vcart(myCustomer.getUsername());
                 object.setVisible(true);
+                dispose();
             }
-            if(buttonPressed.equals(Back)){
-                VnormalCustomer object=new VnormalCustomer(myCustomer.getUsername());
+            if(buttonPressed.equals(Logout)){
+                View object=new View();
                 object.setVisible(true);
+                dispose();
             }
 
         }
