@@ -18,8 +18,16 @@ public class system {
     static public ProductController ProductCon = new ProductController();
     static public ModelController ModelCon = new ModelController();
     static public AdministratorController AdminCon = new AdministratorController();
-    static public StoreOwner StoreOwner = new StoreOwner();
+    static public StoreOwner StoreOwner; //= new StoreOwner();
     static public StoreOwnerController StoreOwnerCon = new StoreOwnerController();
 
-
+    static boolean CheckForStoreOwner(String username)
+    {
+        for(int i=0;i<storeOwners.size();i++){
+            if(storeOwners.get(i).getUsername().equals(username)){
+                return true;
+            }
+        }
+        return false;
+    }
 }

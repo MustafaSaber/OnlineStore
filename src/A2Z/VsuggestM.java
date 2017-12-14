@@ -16,7 +16,7 @@ public class VsuggestM extends JFrame{
     JTextField ModelID =new JTextField(50);
     JButton Submit = new JButton("Submit Model");
     JButton Back = new JButton("Back");
-    StoreOwner myStoreOwner=new StoreOwner();
+    StoreOwner myStoreOwner;//=new StoreOwner();
 
     public VsuggestM(String UserName){
         setTitle("** Suggest Model View **");

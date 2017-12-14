@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * 
  */
-public class StoreOwner extends User {
+public abstract class StoreOwner extends User {
     private Vector<Store> stores=new Vector<>();
 
     public StoreOwner() {
@@ -32,4 +32,7 @@ public class StoreOwner extends User {
     public void setStores(Vector<Store> stores) {
         this.stores = stores;
     }
+
+    abstract public String NumberOfViewsForEachProduct(); //number of views of each model in a store
+    abstract public String MostViewiedProductInEachStore();
 }

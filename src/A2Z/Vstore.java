@@ -20,7 +20,7 @@ public class Vstore extends JFrame{
     JButton Remove = new JButton("Remove Store");
     JButton Update = new JButton("Update");
     JButton Back = new JButton("Login");
-    StoreOwner myStoreOwner=new StoreOwner();
+    StoreOwner myStoreOwner;//=new StoreOwner();
 
     public Vstore(String UserName){
         setTitle("** Store View **");

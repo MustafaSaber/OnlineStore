@@ -16,7 +16,7 @@ public class VsuggestB extends JFrame{
     JTextField BrandID=new JTextField(50);
     JButton Submit = new JButton("Submit Brand");
     JButton Back = new JButton("Back");
-    StoreOwner myStoreOwner=new StoreOwner();
+    StoreOwner myStoreOwner;//=new StoreOwner();
 
     public VsuggestB(String UserName){
         setTitle("** Suggest Brand View **");

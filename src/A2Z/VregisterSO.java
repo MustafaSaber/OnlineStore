@@ -12,11 +12,14 @@ public class VregisterSO extends JFrame{
     JLabel label2=new JLabel("Enter email :");
     JLabel label3=new JLabel("Enter Username :");
     JLabel label4=new JLabel("Enter Password :");
+    JLabel label6=new JLabel("Check for PremuimAccount");
+
     JLabel label5 =new JLabel("Click On Any Button !!");
     JTextField Name =new JTextField(50);
     JTextField Email =new JTextField(50);
     JTextField Username =new JTextField(50);
     JTextField Password =new JTextField(50);
+    JCheckBox prem = new JCheckBox();
 
     JButton Register = new JButton("Register");
     JButton Login = new JButton("Login");
@@ -25,6 +28,7 @@ public class VregisterSO extends JFrame{
         setTitle("** Register Normal View **");
         setSize(600,600);
         Login.addActionListener(new action());
+        Register.addActionListener(new action());
         getContentPane().setLayout(new FlowLayout());
         getContentPane().add(label1);
         getContentPane().add(Name);
@@ -37,6 +41,8 @@ public class VregisterSO extends JFrame{
         getContentPane().add(label5);
         getContentPane().add(Register);
         getContentPane().add(Login);
+        getContentPane().add(label6);
+        getContentPane().add(prem);
         getContentPane().add(label5);
     }
 
@@ -46,17 +52,29 @@ public class VregisterSO extends JFrame{
         public void actionPerformed(ActionEvent e) {
             Object buttonPressed=e.getSource();
             if(buttonPressed.equals(Register)){
-                StoreOwner object=new StoreOwner(Name.getText(), Email.getText(), Username.getText(), Password.getText());
-                storeOwners.add(object);
+                StoreOwner object;
+                if(prem.isSelected())
+                    object = new StoreOwnerPremuim(Name.getText(), Email.getText(), Username.getText(), Password.getText());
+                else
+                    object = new StoreOwnerRegular(Name.getText(), Email.getText(), Username.getText(), Password.getText());
+
+//                storeOwners.add(object);
+                StoreOwnerController storeOwnerController = new StoreOwnerController();
+                storeOwnerController.AddStoreOwnerToDBCont(object.getName(),object.getEmail(),object.getUsername(),object.getPassword(),!prem.isSelected());
+
                 if(Name.getText()=="" || Email.getText()=="" || Username.getText()=="" || Password.getText()=="" ){
                     label5.setText(" Registration fail ");}
                 else {
                     label5.setText(" Registration successful ");}
             }
-            if(buttonPressed.equals(Login)){
-                VStoreOwner object1=new VStoreOwner(Username.getText());
-                object1.setVisible(true);
-                dispose();
+            if(buttonPressed.equals(Login)) {
+                if (system.CheckForStoreOwner(Username.getText())) {
+                    VStoreOwner object1 = new VStoreOwner(Username.getText());
+                    object1.setVisible(true);
+                    dispose();
+                }else {
+                    System.out.println("This user not found");
+                }
             }
         }
     }

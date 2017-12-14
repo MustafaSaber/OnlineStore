@@ -86,4 +86,14 @@ public class NormalCustomerController {
         return false;
     }
 
+    public void SuggestModelCont(String name,String id,Brand b) {
+        Model model = new Model(id,name,b);
+        system.suggestModels.add(model);
+    }
+
+    public void SuggestBrandCont(String id,String name) {
+        Brand brand = new Brand(name,id);
+        system.suggestBrands.add(brand);
+    }
+
 }

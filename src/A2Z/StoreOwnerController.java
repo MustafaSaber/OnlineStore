@@ -42,33 +42,22 @@ public class StoreOwnerController
 
     public void NumberOfViewsForEachProduct() //number of views of each model in a store
     {
-        for (Store store : so.getStores())
-        {
-            for(Product p : store.getProducts()) {
-                System.out.println("Product: " + p.getModel().getName() + " >> " + p.getModel().getView());
-            }
-        }
+        System.out.println(so.NumberOfViewsForEachProduct());
     }
     public void MostViewiedProductInEachStore() //	Get the most viewed product in a store
     {
-        int mostViews = 0;
-        String modelName = "";
-        for (Store store : so.getStores())
-        {
-            for(Product p : store.getProducts())
-            {
-                 modelName = p.getModel().getName();
-                 if(mostViews < (p.getModel().getView()))
-                     mostViews = p.getModel().getView();
-
-            }
-        }
-        System.out.println("The most viewed product: "+ modelName+" >> "+ mostViews);
+        System.out.println(so.MostViewiedProductInEachStore());
     }
 
-    public Boolean AddStoreOwnerToDBCont(String name, String email,String username,String password) {
-        StoreOwner storeOwner = new StoreOwner(name,email,username,password);
-        system.storeOwners.add(storeOwner);
+    public Boolean AddStoreOwnerToDBCont(String name, String email,String username,String password,boolean p) {
+        if (p) {
+            StoreOwner storeOwner = new StoreOwnerRegular(name, email, username, password);
+            system.storeOwners.add(storeOwner);
+        }
+        else{
+            StoreOwner storeOwner = new StoreOwnerPremuim(name, email, username, password);
+            system.storeOwners.add(storeOwner);
+        }
         return true;
     }
 
