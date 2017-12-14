@@ -60,7 +60,7 @@ public class View extends JFrame{
             if(buttonPressed.equals(Login)){
                 boolean flag=false;
                 for(int i=0;i<normalCustomers.size();i++){
-                    if(normalCustomers.get(i).getEmail().equals(Email.getText()) && normalCustomers.get(i).getPassword().equals(Password.getText())){
+                    if(normalCustomers.get(i).getUsername().equals(Email.getText()) && normalCustomers.get(i).getPassword().equals(Password.getText())){
                         VnormalCustomer object=new VnormalCustomer(normalCustomers.get(i).getUsername());
                         object.setVisible(true);
                         dispose();
@@ -70,7 +70,7 @@ public class View extends JFrame{
                 }
                 if(flag==false){
                     for(int i=0;i<storeOwners.size();i++){
-                        if(storeOwners.get(i).getEmail().equals(Email.getText()) && storeOwners.get(i).getPassword().equals(Password.getText())){
+                        if(storeOwners.get(i).getUsername().equals(Email.getText()) && storeOwners.get(i).getPassword().equals(Password.getText())){
                             VStoreOwner object=new VStoreOwner(storeOwners.get(i).getUsername());
                             object.setVisible(true);
                             dispose();
@@ -81,7 +81,7 @@ public class View extends JFrame{
                 }
                 if(flag==false){
                     for(int i=0;i<administrators.size();i++){
-                        if(administrators.get(i).getEmail().equals(Email.getText()) && administrators.get(i).getPassword().equals(Password.getText())){
+                        if(administrators.get(i).getUsername().equals(Email.getText()) && administrators.get(i).getPassword().equals(Password.getText())){
                             Vadmin object=new Vadmin(administrators.get(i).getUsername());
                             object.setVisible(true);
                             dispose();
