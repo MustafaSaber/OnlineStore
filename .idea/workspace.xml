@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="349bb13a-1aac-4d9b-a840-cfa82671885f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A2Z/Store.java" afterPath="$PROJECT_DIR$/src/A2Z/Store.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A2Z/StoreOwner.java" afterPath="$PROJECT_DIR$/src/A2Z/StoreOwner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A2Z/StoreOwnerController.java" afterPath="$PROJECT_DIR$/src/A2Z/StoreOwnerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A2Z/VStoreOwner.java" afterPath="$PROJECT_DIR$/src/A2Z/VStoreOwner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A2Z/View.java" afterPath="$PROJECT_DIR$/src/A2Z/View.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A2Z/VregisterSO.java" afterPath="$PROJECT_DIR$/src/A2Z/VregisterSO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A2Z/Vstore.java" afterPath="$PROJECT_DIR$/src/A2Z/Vstore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A2Z/VviewProductInfo.java" afterPath="$PROJECT_DIR$/src/A2Z/VviewProductInfo.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -698,11 +690,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513338454532</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Test login, register and add store functions.">
+      <created>1513346097630</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1513346097630</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40472000" />
+    <option name="totallyTimeSpent" value="41028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -717,7 +716,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2680921" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2680921" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -810,7 +809,8 @@
     <MESSAGE value="Admin and Normal customer classes was completed without opening views for adding brand and model" />
     <MESSAGE value="Modelc, ondelev, payment, vnc, vsm" />
     <MESSAGE value="Premuim, Regular, suggest product by normal customer also.." />
-    <option name="LAST_COMMIT_MESSAGE" value="Premuim, Regular, suggest product by normal customer also.." />
+    <MESSAGE value="Test login, register and add store functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test login, register and add store functions." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
