@@ -2,6 +2,7 @@
 package A2Z;
 
 import static A2Z.system.brands;
+import static A2Z.system.suggestBrands;
 
 public class BrandController {
     private Brand myBrand;
@@ -32,6 +33,11 @@ public class BrandController {
             Brand BrandObj=new Brand();
             BrandObj.setName(name); BrandObj.setBrandID(brandID);
             brands.add(BrandObj);
+            for(int i = 0; i < system.suggestBrands.size(); i++)
+            {
+                if(suggestBrands.get(i).getBrandID().equals(brandID) && suggestBrands.get(i).getName().equals(name))
+                    suggestBrands.remove(i);
+            }
         }
         return flag;
     }

@@ -41,15 +41,29 @@ public class Vadmin extends JFrame{
         getContentPane().add(AddA);
         getContentPane().add(RemoveA);
         getContentPane().add(Logout);
-        getContentPane().add(new JLabel("Models : "));
+        if(system.models.size()>0)
+            getContentPane().add(new JLabel("Models : "));
         for(Model m:system.models)
         {
             getContentPane().add(new JLabel(m.getName()));
         }
-        getContentPane().add(new JLabel("Brands : "));
+        if(system.brands.size()>0)
+            getContentPane().add(new JLabel("Brands : "));
         for(Brand b:system.brands)
         {
             getContentPane().add(new JLabel(b.getName()));
+        }
+        if(system.suggestModels.size()>0)
+            getContentPane().add(new JLabel("Suggested Models : "));
+        for(Model m: system.suggestModels)
+        {
+            getContentPane().add(new JLabel("Model Name: " + m.getName() + ",Model ID: " + m.getModelID()));
+        }
+        if(system.suggestBrands.size()>0)
+            getContentPane().add(new JLabel("Suggested Brands : "));
+        for(Brand b: system.suggestBrands)
+        {
+            getContentPane().add(new JLabel("Brand Name: " + b.getName() + ",Brand ID: " + b.getBrandID()));
         }
     }
 

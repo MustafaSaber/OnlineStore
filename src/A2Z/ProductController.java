@@ -22,14 +22,14 @@ public class ProductController {
     /**
      * @return
      */
-    public void printInfoandUpdateView(Product p) {
-        System.out.println("Product ID: "+p.getProductID() + " ,Product brand: " + p.getBrand() + " ,Product model: " + p.getModel() + " ,Product price: " + p.getPrice() + " ,Product store: " + p.getStore());
+    public String printInfoandUpdateView(Product p) {
         int f = p.getModel().getView();
-        p.getModel().setView(f++);
+        p.getModel().setView(++f);
+        return ("Product ID: "+p.getProductID() + " ,Product brand: " + p.getBrand().getName() + " ,Product model: " + p.getModel().getName() + " ,Product price: " + p.getPrice() + " ,Product store: " + p.getStore().getName() + " ,No of views: " + p.getModel().getView());
     }
 
-    public void PrintInfoOnly(Product p) {
-        System.out.println("Product ID: "+p.getProductID() + " ,Product brand: " + p.getBrand() + " ,Product model: " + p.getModel() + " ,Product price: " + p.getPrice() + " ,Product store: " + p.getStore());
+    public String PrintInfoOnly(Product p) {
+       return ("Product ID: "+p.getProductID() + " ,Product brand: " + p.getBrand().getName() + "\n,Product model: " + p.getModel().getName() + "\n,Product price: " + p.getPrice() + "\n,Product store: " + p.getStore() + "\n,No of views: " + p.getModel().getView());
     }
 
 }

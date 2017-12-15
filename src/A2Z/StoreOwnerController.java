@@ -34,7 +34,7 @@ public class StoreOwnerController
         for (Store s : so.getStores()){
             if(s.getStoreID().equals(id)) return false;
         }
-        system.StoreCon.AddStoreToDB(name,id);
+        system.StoreCon.AddStoreToDB(name,id, store.getProducts());
         return so.updateStores(store);
     }
 

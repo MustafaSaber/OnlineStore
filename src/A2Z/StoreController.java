@@ -1,4 +1,6 @@
 package A2Z;
+import java.util.Vector;
+
 import static A2Z.system.stores;
 public class StoreController
 {
@@ -18,7 +20,7 @@ public class StoreController
         this.myStore = myStore;
     }
 
-    public boolean AddStoreToDB(String name, String storeID){
+    public boolean AddStoreToDB(String name, String storeID , Vector<Product> p){
         boolean flag=true;
 
         for (int i=0;i<stores.size();i++){
@@ -31,6 +33,7 @@ public class StoreController
             Store StoreObj=new Store();
             StoreObj.setName(name);
             StoreObj.setStoreID(storeID);
+            StoreObj.setProducts(p);
             stores.add(StoreObj);
         }
         return flag;
@@ -54,7 +57,7 @@ public class StoreController
         boolean flag;
         flag=RemoveStoreToDB(name,storeID);
         if(flag==true){
-            flag=AddStoreToDB(newName,storeID);
+            flag=AddStoreToDB(newName,storeID,myStore.getProducts());
         }
         return flag;
     }

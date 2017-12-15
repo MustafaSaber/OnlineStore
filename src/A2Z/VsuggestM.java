@@ -1,10 +1,13 @@
 package A2Z;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static A2Z.system.normalCustomers;
 import static A2Z.system.storeOwners;
 import static A2Z.system.suggestModels;
 
@@ -16,17 +19,27 @@ public class VsuggestM extends JFrame{
     JTextField ModelID =new JTextField(50);
     JButton Submit = new JButton("Submit Model");
     JButton Back = new JButton("Back");
-    StoreOwner myStoreOwner;//=new StoreOwner();
+    User myStoreOwner;//=new StoreOwner();
 
     public VsuggestM(String UserName){
         setTitle("** Suggest Model View **");
         setSize(600,600);
         Submit.addActionListener(new action());
         Back.addActionListener(new action());
+        Boolean flag = false;
         for(int i=0;i<storeOwners.size();i++){
             if(storeOwners.get(i).getUsername().equals(UserName)){
                 myStoreOwner=storeOwners.get(i);
+                flag = true;
                 break;
+            }
+        }
+        if(flag == false){
+            for(int i=0;i<system.normalCustomers.size();i++){
+                if(normalCustomers.get(i).getUsername().equals(UserName)){
+                    myStoreOwner=normalCustomers.get(i);
+                    break;
+                }
             }
         }
 
@@ -58,9 +71,17 @@ public class VsuggestM extends JFrame{
             }
 
             if(buttonPressed.equals(Back)){
-                VStoreOwner object1=new VStoreOwner(myStoreOwner.getUsername());
-                object1.setVisible(true);
-                dispose();
+                if(myStoreOwner instanceof StoreOwner ) {
+                    VStoreOwner object1 = new VStoreOwner(myStoreOwner.getUsername());
+                    object1.setVisible(true);
+                    dispose();
+                }
+                else if(myStoreOwner instanceof NormalCustomer)
+                {
+                    VnormalCustomer object1 = new VnormalCustomer(myStoreOwner.getUsername());
+                    object1.setVisible(true);
+                    dispose();
+                }
             }
         }
     }

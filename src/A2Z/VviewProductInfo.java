@@ -11,11 +11,11 @@ public class VviewProductInfo extends JFrame{
 
     JTextField BrandName=new JTextField(50);
     JButton Back = new JButton("Back");
-    NormalCustomer myCustomer=new NormalCustomer();
+    User myCustomer;
 
-    public VviewProductInfo(String UserName, String ModelName){
+    public VviewProductInfo(String UserName, Product p){
         setTitle("** Product Info View **");
-        setSize(600,600);
+        setSize(800,400);
         Back.addActionListener(new action());
         getContentPane().setLayout(new FlowLayout());
         for (int i=0;i<normalCustomers.size();i++){
@@ -25,6 +25,7 @@ public class VviewProductInfo extends JFrame{
             }
         }
         getContentPane().add(Back);
+        getContentPane().add(new JLabel(system.ProductCon.printInfoandUpdateView(p)));
     }
 
     private class action implements ActionListener{

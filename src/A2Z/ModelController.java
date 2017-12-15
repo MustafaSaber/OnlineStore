@@ -1,5 +1,6 @@
 package A2Z;
 import static A2Z.system.models;
+import static A2Z.system.suggestModels;
 
 public class ModelController {
     private Model model;
@@ -37,6 +38,11 @@ public class ModelController {
             myModel.getMyBrand().setBrandID(brandID);
             myModel.getMyBrand().setName(brandName);
             models.add(myModel);
+            for(int i = 0; i < system.suggestModels.size(); i++)
+            {
+                if(suggestModels.get(i).getModelID().equals(modelID) && suggestModels.get(i).getName().equals(modelName))
+                    suggestModels.remove(i);
+            }
         }
 
         return flag;
