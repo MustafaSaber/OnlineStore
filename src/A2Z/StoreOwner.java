@@ -8,7 +8,7 @@ import java.util.*;
  * 
  */
 public abstract class StoreOwner extends User {
-    private Vector<Store> stores;
+    private Vector<Store> stores = new Vector<Store>();;
 
     public StoreOwner() {
         stores = new Vector<Store>();
