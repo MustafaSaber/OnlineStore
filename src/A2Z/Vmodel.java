@@ -11,8 +11,8 @@ import static A2Z.system.administrators;
 public class Vmodel extends JFrame{
     JLabel label1=new JLabel("Enter Model Name :");
     JLabel label2=new JLabel("Enter Model ID :");
-    JLabel label3=new JLabel("Enter Brand Name :");
-    JLabel label4=new JLabel("Enter Brand ID :");
+    JLabel label3=new JLabel("Enter model brand :");
+    JLabel label4=new JLabel("Enter model brand ID :");
     JLabel label5=new JLabel("Enter Old Model ID :");
     JLabel label6=new JLabel("Click On Any Button !!");
     JTextField ModelName =new JTextField(50);
@@ -20,10 +20,10 @@ public class Vmodel extends JFrame{
     JTextField BrandName =new JTextField(50);
     JTextField BrandID =new JTextField(50);
     JTextField OldModelID =new JTextField(50);
-    JButton Add = new JButton("AddStore");
-    JButton Remove = new JButton("RemoveStore");
-    JButton Update = new JButton("Update");
-    JButton Back = new JButton("Login");
+    JButton Add = new JButton("Add Model");
+    JButton Remove = new JButton("Remove Model");
+    JButton Update = new JButton("Update Model id");
+    JButton Back = new JButton("Back");
     Administrator myAdmin=new Administrator();
 
     public Vmodel(String UserName){

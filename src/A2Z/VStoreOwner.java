@@ -13,7 +13,7 @@ public class VStoreOwner extends JFrame{
     JLabel label =new JLabel("Click On Any Button !!");
     JLabel EStat = new JLabel();
     JLabel Top = new JLabel();
-    Vector<JButton> View=new Vector<>();
+    Vector<JButton> view=new Vector<>();
 
     JButton AddStore = new JButton("Add Store");
     JButton RemoveStore = new JButton("Remove Store");
@@ -52,8 +52,8 @@ public class VStoreOwner extends JFrame{
         getContentPane().add(label);
 
         for (int i = 0; i < myStoreOwner.getStores().size(); i++) {
-            View.add(new JButton(myStoreOwner.ViewStore(myStoreOwner.getStores().get(i))));
-            getContentPane().add(View.get(i));
+            view.add(new JButton(myStoreOwner.getStores().get(i).getName()));
+            getContentPane().add(view.get(i));
         }
     }
 
@@ -96,6 +96,13 @@ public class VStoreOwner extends JFrame{
             if (buttonPressed.equals(top))
             {
                 System.out.print(myStoreOwner.MostViewiedProductInEachStore());
+            }
+            for(JButton jb : view )
+            {
+                if(buttonPressed.equals(jb))
+                {
+                    ///////
+                }
             }
         }
     }

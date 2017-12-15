@@ -8,12 +8,12 @@ import java.awt.event.ActionListener;
 import static A2Z.system.administrators;
 
 public class Vadmin extends JFrame{
-    JButton AddB = new JButton("AddStore Brand");
-    JButton RemoveB = new JButton("RemoveStore Brand");
-    JButton AddM = new JButton("AddStore Model");
-    JButton RemoveM = new JButton("RemoveStore Model");
-    JButton AddA = new JButton("AddStore Admin");
-    JButton RemoveA = new JButton("RemoveStore Admin");
+    JButton AddB = new JButton("Add Brand");
+    JButton RemoveB = new JButton("Remove Brand");
+    JButton AddM = new JButton("Add Model");
+    JButton RemoveM = new JButton("Remove Model");
+    JButton AddA = new JButton("Add Admin");
+    JButton RemoveA = new JButton("Remove Admin");
     JButton Logout = new JButton("Logout");
     Administrator myAdmin=new Administrator();
 
@@ -41,7 +41,16 @@ public class Vadmin extends JFrame{
         getContentPane().add(AddA);
         getContentPane().add(RemoveA);
         getContentPane().add(Logout);
-
+        getContentPane().add(new JLabel("Models : "));
+        for(Model m:system.models)
+        {
+            getContentPane().add(new JLabel(m.getName()));
+        }
+        getContentPane().add(new JLabel("Brands : "));
+        for(Brand b:system.brands)
+        {
+            getContentPane().add(new JLabel(b.getName()));
+        }
     }
 
     private class action implements ActionListener{

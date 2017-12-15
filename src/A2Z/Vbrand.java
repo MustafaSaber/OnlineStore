@@ -16,9 +16,9 @@ public class Vbrand extends JFrame{
     JTextField BrandName=new JTextField(50);
     JTextField BrandID=new JTextField(50);
     JTextField newBrandName=new JTextField(50);
-    JButton Add = new JButton("Add Store");
-    JButton Remove = new JButton("Remove Store");
-    JButton Update = new JButton("Update");
+    JButton Add = new JButton("Add brand");
+    JButton Remove = new JButton("Remove brand");
+    JButton Update = new JButton("Update brand");
     JButton Back = new JButton("Back");
     Administrator myAdmin=new Administrator();
 

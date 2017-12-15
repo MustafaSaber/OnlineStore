@@ -20,7 +20,7 @@ public class ModelController {
         this.model = model;
     }
 
-    public boolean AddModelToDB(String modelID, String modelName, String brandID, String brandName ){
+    public boolean AddModelToDB(String modelName,String modelID, String brandID, String brandName ){
         boolean flag = true;
 
         for (int i=0;i<models.size();i++){

@@ -72,8 +72,11 @@ public class Vstore extends JFrame{
             }
             if(buttonPressed.equals(Remove)){
                 if(!StoreName.getText().equals("") && !StoreID.getText().equals("")){
+                   // System.out.println(myStoreOwner.getStores().size());
                     flag=system.StoreOwnerCon.RemoveStoreCont(StoreName.getText(),StoreID.getText());
+                   // System.out.println(flag);
                     myStoreOwner.setStores(system.StoreOwnerCon.getSo().getStores());
+                    //System.out.println(myStoreOwner.getStores().size());
                 }
                 else {flag=false;}
                 if(flag){label4.setText("RemoveStore Store To DB successfully ");}

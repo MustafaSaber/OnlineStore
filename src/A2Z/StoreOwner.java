@@ -2,6 +2,7 @@ package A2Z;
 
 import A2Z.Store;
 
+import javax.swing.text.StyledEditorKit;
 import java.util.*;
 
 /**
@@ -23,6 +24,10 @@ public abstract class StoreOwner extends User {
 
     public Boolean updateStores(Store s){
        return stores.add(s);
+    }
+    public Boolean deleteStore(Store s)
+    {
+        return stores.removeElement(s);
     }
 
     public Vector<Store> getStores() {

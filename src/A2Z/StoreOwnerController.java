@@ -38,14 +38,13 @@ public class StoreOwnerController
         return so.updateStores(store);
     }
 
-    public Boolean RemoveStoreCont(String id,String name) {
+    public Boolean RemoveStoreCont(String name,String id) {
         system.StoreCon.RemoveStoreToDB(name,id);
-        for (Store store : so.getStores())
+        for (int i=0;i<so.getStores().size();i++)
         {
-            if(store.getStoreID().equals(id) && store.getName().equals(name))
+            if(so.getStores().get(i).getStoreID().equals(id))
             {
-                so.getStores().remove(store);
-                return true;
+                return so.deleteStore(so.getStores().get(i));
             }
         }
         return false;
