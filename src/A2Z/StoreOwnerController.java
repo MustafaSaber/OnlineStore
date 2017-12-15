@@ -5,17 +5,37 @@ import java.util.Vector;
 
 public class StoreOwnerController
 {
-    private StoreOwner so ;
+    private StoreOwner so = new StoreOwner() {
+        @Override
+        public String NumberOfViewsForEachProduct() {
+            return null;
+        }
+
+        @Override
+        public String MostViewiedProductInEachStore() {
+            return null;
+        }
+    } ;
+
+    public StoreOwner getSo() {
+        return so;
+    }
+
+    public void setSo(StoreOwner so) {
+        this.so = so;
+    }
 
     public StoreOwnerController() {
     }
 
 
-    public Boolean AddStoreCont(String id,String name) {
+    public Boolean AddStoreCont(String name,String id) {
         Store store = new Store(name,id);
-        so.getStores().add(store);
+        for (Store s : so.getStores()){
+            if(s.getStoreID().equals(id)) return false;
+        }
         system.StoreCon.AddStoreToDB(name,id);
-        return true;
+        return so.updateStores(store);
     }
 
     public Boolean RemoveStoreCont(String id,String name) {

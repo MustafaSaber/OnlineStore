@@ -21,7 +21,6 @@ public class Store {
     public Store(String name, String storeID) {
         Name = name;
         StoreID = storeID;
-        Products = new Vector();
     }
 
     public void AddProduct(Product myProduct){

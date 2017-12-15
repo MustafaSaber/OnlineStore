@@ -11,7 +11,6 @@ public abstract class StoreOwner extends User {
     private Vector<Store> stores = new Vector<Store>();;
 
     public StoreOwner() {
-        stores = new Vector<Store>();
     }
 
     public StoreOwner(String username, String password) {
@@ -20,6 +19,10 @@ public abstract class StoreOwner extends User {
 
     public StoreOwner(String name, String email, String username, String password) {
         super(name, email, username, password);
+    }
+
+    public Boolean updateStores(Store s){
+       return stores.add(s);
     }
 
     public Vector<Store> getStores() {

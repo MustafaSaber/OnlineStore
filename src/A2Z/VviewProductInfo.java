@@ -24,10 +24,7 @@ public class VviewProductInfo extends JFrame{
                 break;
             }
         }
-
         getContentPane().add(Back);
-
-
     }
 
     private class action implements ActionListener{

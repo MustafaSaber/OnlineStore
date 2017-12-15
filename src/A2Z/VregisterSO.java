@@ -60,7 +60,6 @@ public class VregisterSO extends JFrame{
 
 //                storeOwners.add(object);
 
-                System.out.println(Name.getText() + "\n" + Email.getText() + " " + Username.getText() + " " + Password.getText());
                 if(Name.getText().equals("") || Email.getText().equals("") || Username.getText().equals("") || Password.getText().equals("") ){
                     label5.setText(" Registration fail ");}
                 else {
