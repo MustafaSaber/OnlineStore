@@ -21,6 +21,7 @@ public class system {
     static public StoreOwner StoreOwner; //= new StoreOwner();
     static public StoreOwnerController StoreOwnerCon = new StoreOwnerController();
 
+
     static boolean CheckForStoreOwner(String username)
     {
         for(int i=0;i<storeOwners.size();i++){

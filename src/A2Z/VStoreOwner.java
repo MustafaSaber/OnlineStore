@@ -40,11 +40,12 @@ public class VStoreOwner extends JFrame{
                 break;
             }
         }
-        for (int i=0;i<myStoreOwner.getStores().size();i++){
-            View.add(new JButton(myStoreOwner.ViewStore(myStoreOwner.getStores().get(i))));
-            getContentPane().add(View.get(i));
+        if(myStoreOwner.getStores() != null){
+            for (int i = 0; i < myStoreOwner.getStores().size(); i++) {
+                View.add(new JButton(myStoreOwner.ViewStore(myStoreOwner.getStores().get(i))));
+                getContentPane().add(View.get(i));
+            }
         }
-
         getContentPane().setLayout(new FlowLayout());
         getContentPane().add(AddStore);
         getContentPane().add(RemoveStore);

@@ -5,7 +5,7 @@ import java.util.Vector;
 
 public class StoreOwnerController
 {
-    private StoreOwner so = new StoreOwner();
+    private StoreOwner so ;
 
     public StoreOwnerController() {
     }
