@@ -30,6 +30,7 @@ public class View extends JFrame{
             SomeModels.add(new JLabel(models.get(i).getName()));
             getContentPane().add(SomeModels.get(i));
         }
+
         getContentPane().add(RegisterN);
         getContentPane().add(RegisterSO);
         getContentPane().add(label1);
