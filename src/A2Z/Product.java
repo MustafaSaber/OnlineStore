@@ -60,7 +60,7 @@ public class Product {
     /**
      * 
      */
-    private Store store;
+    private Store store = new Store();
 
     public Product(String productID, Model model, Brand brand, double price, Store store) {
         this.productID = productID;

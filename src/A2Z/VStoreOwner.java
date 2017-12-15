@@ -55,6 +55,17 @@ public class VStoreOwner extends JFrame{
             view.add(new JButton(myStoreOwner.getStores().get(i).getName()));
             getContentPane().add(view.get(i));
         }
+
+        for(int i = 0 ; i < view.size(); i++)
+            view.get(i).addActionListener(new action());
+
+        for (int i = 0; i < myStoreOwner.getStores().size(); i++) {
+            if(myStoreOwner.getStores().get(i).getProducts().size()>0)
+                getContentPane().add(new JLabel("Store" + (i+1) + " products: "));
+            for (int j = 0 ; j < myStoreOwner.getStores().get(i).getProducts().size(); j++)
+            //view.add(new JButton(myStoreOwner.getStores().get(i).getName()));
+            getContentPane().add(new JLabel(myStoreOwner.getStores().get(i).getProducts().get(j).getModel().getName()));
+        }
     }
 
     private class action implements ActionListener{
@@ -97,11 +108,13 @@ public class VStoreOwner extends JFrame{
             {
                 System.out.print(myStoreOwner.MostViewiedProductInEachStore());
             }
-            for(JButton jb : view )
+            for(int i = 0 ; i < view.size(); i++)
             {
-                if(buttonPressed.equals(jb))
+                if(buttonPressed.equals(view.get(i)))
                 {
-                    ///////
+                    Vproduct object=new Vproduct(myStoreOwner.getName(), myStoreOwner.getStores().get(i));
+                    object.setVisible(true);
+                    dispose();
                 }
             }
         }
