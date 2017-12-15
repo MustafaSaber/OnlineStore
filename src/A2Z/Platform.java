@@ -29,7 +29,6 @@ public class Platform {
         //Admin
         Administrator admin = new Administrator("admin","admin","admin","admin");
         system.administrators.add(admin);
-
     }
     public static void main(String[] args){
         Platform p = new Platform();

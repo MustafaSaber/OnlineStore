@@ -39,7 +39,6 @@ public class View extends JFrame{
         getContentPane().add(Password);
         getContentPane().add(Login);
         getContentPane().add(label3);
-
     }
 
     private class action implements ActionListener{

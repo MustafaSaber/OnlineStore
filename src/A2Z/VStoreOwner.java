@@ -13,7 +13,7 @@ public class VStoreOwner extends JFrame{
     JLabel label =new JLabel("Click On Any Button !!");
     JLabel EStat = new JLabel();
     JLabel Top = new JLabel();
-    Vector<JButton> view =new Vector<>();
+    Vector<JButton> View=new Vector<>();
 
     JButton AddStore = new JButton("Add Store");
     JButton RemoveStore = new JButton("Remove Store");
@@ -50,14 +50,11 @@ public class VStoreOwner extends JFrame{
         getContentPane().add(top);
         getContentPane().add(Logout);
         getContentPane().add(label);
-        System.out.println(myStoreOwner.getStores().size());
-        for (int i = 0; i < myStoreOwner.getStores().size(); i++) {
-            JButton temp = new JButton(myStoreOwner.getStores().get(i).getName());
-            //System.out.println( "Store " + i + myStoreOwner.ViewStore(myStoreOwner.getStores().get(i)));
-            //view.add(new JButton(myStoreOwner.ViewStore(myStoreOwner.getStores().get(i))));
-            getContentPane().add(temp);
-        }
 
+        for (int i = 0; i < myStoreOwner.getStores().size(); i++) {
+            View.add(new JButton(myStoreOwner.ViewStore(myStoreOwner.getStores().get(i))));
+            getContentPane().add(View.get(i));
+        }
     }
 
     private class action implements ActionListener{
