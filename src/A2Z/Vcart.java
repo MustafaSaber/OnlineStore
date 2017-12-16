@@ -17,6 +17,10 @@ public class Vcart extends JFrame{
     public Vcart(String UserName){
         setTitle("** Cart View **");
         setSize(600,600);
+        Back.setPreferredSize(new Dimension(550,20));
+        CheckOut.setPreferredSize(new Dimension(550,20));
+        TotalPrice.setPreferredSize(new Dimension(550,20));
+
         Back.addActionListener(new action());
         CheckOut.addActionListener(new action());
         TotalPrice.addActionListener(new action());

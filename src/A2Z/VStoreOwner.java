@@ -27,6 +27,14 @@ public class VStoreOwner extends JFrame{
     public VStoreOwner(String UserName){
         setTitle("** Store Owner View **");
         setSize(600,600);
+        AddStore.setPreferredSize(new Dimension(550, 20));
+        RemoveStore.setPreferredSize(new Dimension(550, 20));
+        SuggestBrand.setPreferredSize(new Dimension(550, 20));
+        SuggestModel.setPreferredSize(new Dimension(550, 20));
+        Logout.setPreferredSize(new Dimension(550, 20));
+        Estat.setPreferredSize(new Dimension(550, 20));
+        top.setPreferredSize(new Dimension(550, 20));
+
         AddStore.addActionListener(new action());
         RemoveStore.addActionListener(new action());
         SuggestModel.addActionListener(new action());
@@ -53,6 +61,7 @@ public class VStoreOwner extends JFrame{
 
         for (int i = 0; i < myStoreOwner.getStores().size(); i++) {
             view.add(new JButton(myStoreOwner.getStores().get(i).getName()));
+            view.get(i).setPreferredSize(new Dimension(550, 20));
             getContentPane().add(view.get(i));
         }
 
@@ -61,7 +70,7 @@ public class VStoreOwner extends JFrame{
 
         for (int i = 0; i < myStoreOwner.getStores().size(); i++) {
             if(myStoreOwner.getStores().get(i).getProducts().size()>0)
-                getContentPane().add(new JLabel("Store" + (i+1) + " products: "));
+                getContentPane().add(new JLabel("// Store " + (i+1) + " >> products: "));
             for (int j = 0 ; j < myStoreOwner.getStores().get(i).getProducts().size(); j++)
             //view.add(new JButton(myStoreOwner.getStores().get(i).getName()));
             getContentPane().add(new JLabel(myStoreOwner.getStores().get(i).getProducts().get(j).getModel().getName()));

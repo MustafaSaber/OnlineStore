@@ -33,4 +33,22 @@ public class system {
         }
         return false;
     }
+    static boolean CheckForNormalCustmer(String username)
+    {
+        for(int i=0;i<normalCustomers.size();i++){
+            if(normalCustomers.get(i).getUsername().equals(username)){
+                return true;
+            }
+        }
+        return false;
+    }
+    static boolean CheckForAdmin(String username)
+    {
+        for(int i=0;i<administrators.size();i++){
+            if(administrators.get(i).getUsername().equals(username)){
+                return true;
+            }
+        }
+        return false;
+    }
 }

@@ -10,7 +10,7 @@ import static A2Z.system.storeOwners;
 import static A2Z.system.stores;
 
 public class Vstore extends JFrame{
-    JLabel label1=new JLabel("Enter Store Name :");
+    JLabel label1=new JLabel("Enter Store name :");
     JLabel label2=new JLabel("Enter Store ID :");
     JLabel label3=new JLabel("Enter The New Store Name :");
     JLabel label4=new JLabel("Click On Any Button !!");

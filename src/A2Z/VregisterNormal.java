@@ -19,6 +19,7 @@ public class VregisterNormal extends JFrame{
     JTextField Password =new JTextField(50);
     JButton Register = new JButton("Register");
     JButton Login = new JButton("Login");
+    boolean flagR = false;
 
     public VregisterNormal(){
         setTitle("** Register Normal View **");
@@ -47,22 +48,30 @@ public class VregisterNormal extends JFrame{
         public void actionPerformed(ActionEvent e) {
             Object buttonPressed=e.getSource();
             if(buttonPressed.equals(Register)){
-                boolean flag=false;
-                if(!Name.getText().equals("") || !Email.getText().equals("") || !Username.getText().equals("") || !Password.getText().equals("") ){
-                    NormalCustomer object=new NormalCustomer(Name.getText(), Email.getText(), Username.getText(), Password.getText());
-                    normalCustomers.add(object);
-                    flag=true;
+                if(!Name.getText().equals("") && !Email.getText().equals("") && !Username.getText().equals("") && !Password.getText().equals(""))
+                {
+                    if(!system.CheckForNormalCustmer(Username.getText()) && !system.CheckForStoreOwner(Username.getText()) && !system.CheckForAdmin(Username.getText()))
+                    {
+                        NormalCustomer object=new NormalCustomer(Name.getText(), Email.getText(), Username.getText(), Password.getText());
+                        normalCustomers.add(object);
+                        label5.setText(" Registration successful ");
+                        flagR = true;
+                    }
+                     else
+                        JOptionPane.showMessageDialog(null,"Username is already taken !! Please enter another username" ,"Error",JOptionPane.WARNING_MESSAGE);
                 }
-
-                if(flag==false ){
-                    label5.setText(" Registration fail ");}
-                else {
-                    label5.setText(" Registration successful ");}
+                else
+                    label5.setText(" Registration fail");
             }
             if(buttonPressed.equals(Login)){
-                VnormalCustomer object=new VnormalCustomer(Username.getText());
-                object.setVisible(true);
-                dispose();
+                if(flagR && system.CheckForNormalCustmer(Username.getText())){
+                    label5.setText(" Login successful ");
+                    VnormalCustomer object1 = new VnormalCustomer(Username.getText());
+                    object1.setVisible(true);
+                    dispose();
+                }
+                else
+                    label5.setText("Login failed");
             }
         }
     }

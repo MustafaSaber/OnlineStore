@@ -23,6 +23,7 @@ public class VregisterSO extends JFrame{
 
     JButton Register = new JButton("Register");
     JButton Login = new JButton("Login");
+    boolean flagR = false;
 
     public VregisterSO(){
         setTitle("** Register Normal View **");
@@ -63,17 +64,24 @@ public class VregisterSO extends JFrame{
                 if(Name.getText().equals("") || Email.getText().equals("") || Username.getText().equals("") || Password.getText().equals("") ){
                     label5.setText(" Registration fail ");}
                 else {
-                    system.StoreOwnerCon.AddStoreOwnerToDBCont(object.getName(),object.getEmail(),object.getUsername(),object.getPassword(),!prem.isSelected());
-                    label5.setText(" Registration successful ");
+                    if(!system.CheckForNormalCustmer(Username.getText()) && !system.CheckForStoreOwner(Username.getText()) && !system.CheckForAdmin(Username.getText()))
+                    {
+                        system.StoreOwnerCon.AddStoreOwnerToDBCont(object.getName(),object.getEmail(),object.getUsername(),object.getPassword(),!prem.isSelected());
+                        label5.setText(" Registration successful");
+                        flagR = true;
+                    }
+                    else
+                        JOptionPane.showMessageDialog(null,"Username is already taken !! Please enter another username" ,"Error",JOptionPane.WARNING_MESSAGE);
                 }
             }
             if(buttonPressed.equals(Login)) {
-                if (system.CheckForStoreOwner(Username.getText())) {
+                if (flagR && system.CheckForStoreOwner(Username.getText())) {
+                    label5.setText(" Login successful ");
                     VStoreOwner object1 = new VStoreOwner(Username.getText());
                     object1.setVisible(true);
                     dispose();
                 }else {
-                    System.out.println("This user not found");
+                    label5.setText(" Login failed ");
                 }
             }
         }

@@ -9,7 +9,7 @@ import static A2Z.system.ModelCon;
 import static A2Z.system.administrators;
 
 public class Vmodel extends JFrame{
-    JLabel label1=new JLabel("Enter Model Name :");
+    JLabel label1=new JLabel("Enter Model name :");
     JLabel label2=new JLabel("Enter Model ID :");
     JLabel label3=new JLabel("Enter model brand :");
     JLabel label4=new JLabel("Enter model brand ID :");

@@ -23,12 +23,12 @@ public class View extends JFrame{
 
     public View(){
         setTitle("** View **");
-        setSize(600,300);
+        setSize(600,600);
 
         Email.setColumns(40);
         Password.setColumns(40);
-        RegisterN.setPreferredSize(new Dimension(500, 20));
-        RegisterSO.setPreferredSize(new Dimension(500,20));
+        RegisterN.setPreferredSize(new Dimension(550, 20));
+        RegisterSO.setPreferredSize(new Dimension(550,20));
 
 
         RegisterN.addActionListener(new action());
@@ -43,7 +43,7 @@ public class View extends JFrame{
                 productsB.add(new JButton(system.stores.get(i).getProducts().get(j).getModel().getName()));
                 products.add(system.stores.get(i).getProducts().get(j));
                 productsB.get(productsB.size()-1).addActionListener(new action());
-                productsB.get( productsB.size()-1).setPreferredSize(new Dimension(230,50));
+                productsB.get( productsB.size()-1).setPreferredSize(new Dimension(550,30));
                 getContentPane().add(productsB.get( productsB.size()-1));
             }
         }

@@ -19,6 +19,9 @@ public class VviewProductInfo extends JFrame{
         product = p;
         setTitle("** Product Info View **");
         setSize(800,400);
+        Back.setPreferredSize(new Dimension(550, 20));
+        AddToCart.setPreferredSize(new Dimension(550, 20));
+
         Back.addActionListener(new action());
         AddToCart.addActionListener(new action());
         getContentPane().setLayout(new FlowLayout());
@@ -30,8 +33,8 @@ public class VviewProductInfo extends JFrame{
             }
         }
         getContentPane().add(Back);
-        getContentPane().add(new JLabel(system.ProductCon.printInfoandUpdateView(p)));
         getContentPane().add(AddToCart);
+        getContentPane().add(new JLabel(system.ProductCon.printInfoandUpdateView(p)));
     }
 
     private class action implements ActionListener{
