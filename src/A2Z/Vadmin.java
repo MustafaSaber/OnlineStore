@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Vector;
 
 import static A2Z.system.administrators;
 
@@ -16,6 +17,12 @@ public class Vadmin extends JFrame{
     JButton RemoveA = new JButton("Remove Admin");
     JButton VocherCard = new JButton("Add Voucher Card");
     JButton Logout = new JButton("Logout");
+    JList models;
+    JList brands;
+    JList smodels;
+    JList sbrands;
+
+    JList list;
     Administrator myAdmin=new Administrator();
 
     public Vadmin(String UserName){
@@ -44,6 +51,7 @@ public class Vadmin extends JFrame{
                 break;
             }
         }
+        Vector<String >s = new Vector<>();
         getContentPane().setLayout(new FlowLayout());
         getContentPane().add(AddB);
         getContentPane().add(RemoveB);
@@ -55,29 +63,53 @@ public class Vadmin extends JFrame{
         getContentPane().add(Logout);
 
         if(system.models.size()>0)
-            getContentPane().add(new JLabel("Models : "));
+            s.add("Models : ");
         for(Model m:system.models)
         {
-            getContentPane().add(new JLabel(m.getName()));
+            s.add(m.getName());
         }
+        models = new JList(s);
+        getContentPane().add(models);
+        s=new Vector<>();
         if(system.brands.size()>0)
-            getContentPane().add(new JLabel("Brands : "));
+            s.add("Brands : ");
         for(Brand b:system.brands)
         {
-            getContentPane().add(new JLabel(b.getName()));
+            s.add(b.getName());
         }
+        brands = new JList(s);
+        getContentPane().add(brands);
+        s=new Vector<>();
+
         if(system.suggestModels.size()>0)
-            getContentPane().add(new JLabel("Suggested Models : "));
+            s.add("Suggested Models : ");
         for(Model m: system.suggestModels)
         {
-            getContentPane().add(new JLabel("Model Name: " + m.getName() + ",Model ID: " + m.getModelID()));
+            s.add("Model Name: " + m.getName());
+            s.add("Model ID: " + m.getModelID());
         }
+        smodels = new JList(s);
+        getContentPane().add(smodels);
+        s=new Vector<>();
         if(system.suggestBrands.size()>0)
-            getContentPane().add(new JLabel("Suggested Brands :"));
+            s.add("Suggested Brands :");
         for(Brand b: system.suggestBrands)
         {
-            getContentPane().add(new JLabel("Brand Name: " + b.getName() + ",Brand ID: " + b.getBrandID()));
+            s.add("Brand Name: " + b.getName());
+            s.add("Brand ID: " + b.getBrandID());
         }
+        sbrands = new JList(s);
+        getContentPane().add(sbrands);
+        s=new Vector<>();
+        if(system.voucherCards.size()>0)
+            s.add("Voucher Cards : ");
+        for (VoucherCard v : system.voucherCards)
+        {
+            String string = "ID : "+v.getVoucherID() + " ,value : " + v.getValue();
+            s.add(string);
+        }
+        list = new JList(s);
+        getContentPane().add(list);
     }
 
     private class action implements ActionListener{

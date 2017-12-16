@@ -22,4 +22,3 @@ public class StoreOwnerRegular extends StoreOwner {
         super(name, email, username, password);
     }
 }
-
