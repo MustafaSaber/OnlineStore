@@ -112,7 +112,8 @@ public class Vadmin extends JFrame{
             }
             if(buttonPressed.equals(VocherCard))
             {
-
+                VaddVoucherCard ob = new VaddVoucherCard(myAdmin.getUsername());
+                ob.setVisible(true);
             }
             if(buttonPressed.equals(Logout)){
                 View object=new View();
