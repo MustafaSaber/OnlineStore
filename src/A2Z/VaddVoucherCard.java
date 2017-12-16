@@ -62,7 +62,7 @@ public class VaddVoucherCard extends JFrame {
                 }
                 VoucherCard vc = new VoucherCard(vl,date,vId.getText());
                 system.voucherCards.add(vc);
-                label.setText("Submit successfully");
+                label.setText("Submited successfully");
             }
             if(buttonPressed.equals(back)){
                 Vadmin object=new Vadmin(myAdmin.getUsername());
