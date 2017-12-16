@@ -24,6 +24,11 @@ public class VnormalCustomer extends JFrame{
     public VnormalCustomer(String UserName){
         setTitle("** Normal Customer View **");
         setSize(600,600);
+        MyCart.setPreferredSize(new Dimension(500, 20));
+        Logout.setPreferredSize(new Dimension(500, 20));
+        SM.setPreferredSize(new Dimension(500, 20));
+        SB.setPreferredSize(new Dimension(500, 20));
+
         Logout.addActionListener(new action());
         MyCart.addActionListener(new action());
         SM.addActionListener(new action());
@@ -42,10 +47,12 @@ public class VnormalCustomer extends JFrame{
 
         for(int i = 0 ; i < system.stores.size(); i++){
             if(stores.get(i).getProducts().size()>0)
+
                 getContentPane().add(new JLabel("Store: " + stores.get(i).getName()));
             for(int j = 0; j < stores.get(i).getProducts().size(); j++){
                 allproductsB.add(new JButton(stores.get(i).getProducts().get(j).getModel().getName()));
                 allproducts.add(stores.get(i).getProducts().get(j));
+                allproductsB.get(allproducts.size()-1).setPreferredSize(new Dimension(200,20));
                 getContentPane().add(allproductsB.get(allproducts.size()-1));
             }
         }

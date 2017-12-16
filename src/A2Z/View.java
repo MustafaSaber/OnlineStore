@@ -20,9 +20,17 @@ public class View extends JFrame{
     JButton RegisterSO = new JButton("Register As Store Owner");
     JButton Login = new JButton("Login");
 
+
     public View(){
         setTitle("** View **");
-        setSize(600,600);
+        setSize(600,300);
+
+        Email.setColumns(40);
+        Password.setColumns(40);
+        RegisterN.setPreferredSize(new Dimension(500, 20));
+        RegisterSO.setPreferredSize(new Dimension(500,20));
+
+
         RegisterN.addActionListener(new action());
         RegisterSO.addActionListener(new action());
         Login.addActionListener(new action());
@@ -35,18 +43,18 @@ public class View extends JFrame{
                 productsB.add(new JButton(system.stores.get(i).getProducts().get(j).getModel().getName()));
                 products.add(system.stores.get(i).getProducts().get(j));
                 productsB.get(productsB.size()-1).addActionListener(new action());
+                productsB.get( productsB.size()-1).setPreferredSize(new Dimension(230,50));
                 getContentPane().add(productsB.get( productsB.size()-1));
             }
         }
-
-        getContentPane().add(RegisterN);
-        getContentPane().add(RegisterSO);
         getContentPane().add(label1);
         getContentPane().add(Email);
         getContentPane().add(label2);
         getContentPane().add(Password);
         getContentPane().add(Login);
         getContentPane().add(label3);
+        getContentPane().add(RegisterN);
+        getContentPane().add(RegisterSO);
     }
 
     private class action implements ActionListener{
