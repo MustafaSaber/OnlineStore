@@ -14,10 +14,12 @@ public class system {
     static public ArrayList<Model> suggestModels  = new ArrayList<>();
 
     static public StoreController StoreCon = new StoreController();
+    static public NormalCustomerController NormalCustomerCon = new NormalCustomerController();
     static public BrandController BrandCon = new BrandController();
     static public ProductController ProductCon = new ProductController();
     static public ModelController ModelCon = new ModelController();
     static public AdministratorController AdminCon = new AdministratorController();
+    static public CartController cartController = new CartController();
     static public StoreOwner StoreOwner; //= new StoreOwner();
     static public StoreOwnerController StoreOwnerCon = new StoreOwnerController();
 

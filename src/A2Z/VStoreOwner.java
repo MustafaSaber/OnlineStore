@@ -102,11 +102,23 @@ public class VStoreOwner extends JFrame{
             }
             if (buttonPressed.equals(Estat))
             {
-                System.out.print(myStoreOwner.NumberOfViewsForEachProduct());
+                String title = "";
+                if(myStoreOwner instanceof StoreOwnerRegular)
+                    title = "Error";
+                else
+                    title = "Number of views for each product";
+
+                JOptionPane.showMessageDialog(null,myStoreOwner.NumberOfViewsForEachProduct(),title,JOptionPane.WARNING_MESSAGE);
             }
             if (buttonPressed.equals(top))
             {
-                System.out.print(myStoreOwner.MostViewiedProductInEachStore());
+                String title = "";
+                if(myStoreOwner instanceof StoreOwnerRegular)
+                    title = "Error";
+                else
+                    title = "Most viewied product in each store";
+
+                JOptionPane.showMessageDialog(null,myStoreOwner.MostViewiedProductInEachStore(),title,JOptionPane.WARNING_MESSAGE);
             }
             for(int i = 0 ; i < view.size(); i++)
             {

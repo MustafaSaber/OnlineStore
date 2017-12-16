@@ -42,11 +42,14 @@ public class Vpay extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e) {
             Object buttonPressed=e.getSource();
-            if(buttonPressed.equals(Submit)){
-                VnormalCustomer object=new VnormalCustomer(myCustomer.getUsername());
-                object.setVisible(true);
-                dispose();
-            }
+             if(!Address.getText().equals("") || !CardID.getText().equals("")){
+                 if(buttonPressed.equals(Submit)){
+                     myCustomer.setCart(new Cart());
+                     VnormalCustomer object=new VnormalCustomer(myCustomer.getUsername());
+                     object.setVisible(true);
+                     dispose();
+                 }
+             }
             if(buttonPressed.equals(Back)){
                 Vcart object=new Vcart(myCustomer.getUsername());
                 object.setVisible(true);

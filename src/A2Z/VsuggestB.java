@@ -59,12 +59,14 @@ public class VsuggestB extends JFrame{
             Object buttonPressed=e.getSource();
 
             if(buttonPressed.equals(Submit)){
-                Brand object=new Brand();
-                object.setName(BrandName.getText());
-                object.setBrandID(BrandID.getText());
-                suggestBrands.add(object);
-                label3.setText("Submit Brand is successful ");
-
+                if(!BrandName.getText().equals("") && !BrandID.getText().equals("")) {
+                    Brand object = new Brand();
+                    object.setName(BrandName.getText());
+                    object.setBrandID(BrandID.getText());
+                    suggestBrands.add(object);
+                    label3.setText("Submit Brand is successful ");
+                }
+                else label3.setText("Submit Brand is failed ");
             }
 
             if(buttonPressed.equals(Back)){

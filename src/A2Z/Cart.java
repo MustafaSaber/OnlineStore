@@ -7,13 +7,13 @@ import java.util.*;
  */
 public class Cart {
 
-    private Vector<Product> products;
+    private Vector<Product> products =  new Vector<Product>();
 
-    private CreditCard creditcard;
+    private CreditCard creditcard = new CreditCard();
 
     private String address;
 
-    private VoucherCard Vouchercard;
+    private VoucherCard Vouchercard = new VoucherCard();
 
     private double TotalPrice;
     /**
@@ -28,6 +28,10 @@ public class Cart {
         this.address = address;
         this.Vouchercard = new VoucherCard();
         TotalPrice = totalPrice;
+    }
+    public void addProuct(Product p)
+    {
+        products.addElement(p);
     }
 
     public Vector<Product> getProducts() {
@@ -63,7 +67,12 @@ public class Cart {
     }
 
     public double getTotalPrice() {
-        return TotalPrice;
+        double t =0;
+        for (Product p :products)
+            t += p.getPrice();
+
+        setTotalPrice(t);
+         return t;
     }
 
     public void setTotalPrice(double totalPrice) {

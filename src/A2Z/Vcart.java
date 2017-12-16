@@ -31,7 +31,10 @@ public class Vcart extends JFrame{
         getContentPane().add(CheckOut);
         getContentPane().add(Back);
 
-
+        for (Product p : myCustomer.getCart().getProducts())
+        {
+            getContentPane().add(new JLabel(p.getModel().getName()));
+        }
     }
 
     private class action implements ActionListener{
@@ -40,7 +43,8 @@ public class Vcart extends JFrame{
         public void actionPerformed(ActionEvent e) {
             Object buttonPressed=e.getSource();
             if(buttonPressed.equals(TotalPrice)){
-
+                String totalPrice = Double.toString(myCustomer.getCart().getTotalPrice());
+                JOptionPane.showMessageDialog(null,totalPrice ,"Total price",JOptionPane.WARNING_MESSAGE);
             }
             if(buttonPressed.equals(CheckOut)){
                 Vpay object=new Vpay(myCustomer.getUsername());

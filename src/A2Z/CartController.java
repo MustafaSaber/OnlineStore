@@ -23,6 +23,13 @@ public class CartController {
      */
     private Cart cart;
 
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
 
     /**
      * @param

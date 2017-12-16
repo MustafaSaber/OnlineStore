@@ -62,11 +62,15 @@ public class VsuggestM extends JFrame{
             Object buttonPressed=e.getSource();
 
             if(buttonPressed.equals(Submit)){
+                if(!ModelName.getText().equals("") && !ModelID.getText().equals(""))
+                {
                 Model object=new Model();
                 object.setName(ModelName.getText());
                 object.setModelID(ModelID.getText());
                 suggestModels.add(object);
-                label3.setText("Submit Brand is successful ");
+                label3.setText("Submit Model is successful ");}
+                else
+                    label3.setText("Submit Model is failed ");
 
             }
 

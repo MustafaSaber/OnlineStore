@@ -20,7 +20,7 @@ public class NormalCustomerController {
         this.normal = normal;
     }
 
-    public NormalCustomer normal;
+    private NormalCustomer normal = new NormalCustomer();
 
 
     /**

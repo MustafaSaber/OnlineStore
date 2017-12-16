@@ -12,7 +12,8 @@ public class View extends JFrame{
     JLabel label1=new JLabel("Enter Username :");
     JLabel label2=new JLabel("Enter Password :");
     JLabel label3 =new JLabel("Click On Any Button !!");
-    Vector<JLabel> SomeModels=new Vector<>();
+    Vector<JButton> productsB=new Vector<>();
+    Vector<Product> products=new Vector<>();
     JTextField Email=new JTextField(50);
     JTextField Password=new JTextField(50);
     JButton RegisterN = new JButton("Register As Normal User");
@@ -25,10 +26,17 @@ public class View extends JFrame{
         RegisterN.addActionListener(new action());
         RegisterSO.addActionListener(new action());
         Login.addActionListener(new action());
+
         getContentPane().setLayout(new FlowLayout());
-        for(int i=0;i< models.size()/2;i++){
-            SomeModels.add(new JLabel(models.get(i).getName()));
-            getContentPane().add(SomeModels.get(i));
+
+        for(int i=0;i<system.stores.size();i++){
+            getContentPane().add(new JLabel(system.stores.get(i).getName()));
+            for(int j=0;j<system.stores.get(i).getProducts().size();j++) {
+                productsB.add(new JButton(system.stores.get(i).getProducts().get(j).getModel().getName()));
+                products.add(system.stores.get(i).getProducts().get(j));
+                productsB.get(productsB.size()-1).addActionListener(new action());
+                getContentPane().add(productsB.get( productsB.size()-1));
+            }
         }
 
         getContentPane().add(RegisterN);
@@ -94,6 +102,12 @@ public class View extends JFrame{
                     label3.setText(" Login fail ");
                 }
             }
-        }
+            for(int i=0;i<productsB.size();i++)
+            {
+                if (buttonPressed.equals(productsB.get(i))){
+                      JOptionPane.showMessageDialog(null,system.ProductCon.printInfoandUpdateView(products.get(i)),"Product info",JOptionPane.WARNING_MESSAGE);
+                }
+            }
     }
+}
 }
