@@ -16,7 +16,7 @@ public class VregisterNormal extends JFrame{
     JTextField Name =new JTextField(50);
     JTextField Email =new JTextField(50);
     JTextField Username =new JTextField(50);
-    JTextField Password =new JTextField(50);
+    JPasswordField Password =new JPasswordField(50);
     JButton Register = new JButton("Register");
     JButton Login = new JButton("Login");
     boolean flagR = false;

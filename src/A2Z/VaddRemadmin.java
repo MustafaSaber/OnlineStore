@@ -19,7 +19,7 @@ public class VaddRemadmin extends JFrame{
     JTextField AdminName=new JTextField(50);
     JTextField AdminEmail=new JTextField(50);
     JTextField AdminUsername=new JTextField(50);
-    JTextField AdminPassword=new JTextField(50);
+    JPasswordField AdminPassword=new JPasswordField(50);
     JTextField newAdminUsername=new JTextField(50);
     JTextField newAdminPassword=new JTextField(50);
     JButton Add = new JButton("Add admin");
