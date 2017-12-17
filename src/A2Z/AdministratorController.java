@@ -36,8 +36,8 @@ public class AdministratorController {
     /**
      */
     public void AddModelCont() {
-        // model view ;
-    }
+
+     }
 
     /**
      * @return

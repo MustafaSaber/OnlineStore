@@ -3,7 +3,7 @@ package A2Z;
 public class Model {
     private String modelID;
     private String name;
-    private Brand myBrand;
+    private Brand myBrand = new Brand();
     private int view;
 
     public Model(){
@@ -36,6 +36,9 @@ public class Model {
 
     public Brand getMyBrand() {
         return myBrand;
+    }
+    public String getMyBrandIfo() {
+        return myBrand.getBrandID()+" "+myBrand.getName();
     }
 
     public void setMyBrand(Brand myBrand) {

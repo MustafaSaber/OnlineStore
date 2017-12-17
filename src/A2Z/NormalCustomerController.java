@@ -1,17 +1,11 @@
 package A2Z;
 
-import A2Z.NormalCustomer;
-
-/**
- * 
- */
 public class NormalCustomerController {
 
     /**
      * Default constructor
      */
-    public NormalCustomerController() {
-    }
+    public NormalCustomerController() {}
 
     public NormalCustomerController(NormalCustomer normal) {
 
@@ -26,10 +20,7 @@ public class NormalCustomerController {
         this.normal = normal;
     }
 
-    /**
-     * 
-     */
-    public NormalCustomer normal;
+    private NormalCustomer normal = new NormalCustomer();
 
 
     /**
@@ -93,6 +84,16 @@ public class NormalCustomerController {
             if (a.getUsername().equals(username) || a.getEmail().equals(mail))
                 return true;
         return false;
+    }
+
+    public void SuggestModelCont(String name,String id,Brand b) {
+        Model model = new Model(id,name,b);
+        system.suggestModels.add(model);
+    }
+
+    public void SuggestBrandCont(String id,String name) {
+        Brand brand = new Brand(name,id);
+        system.suggestBrands.add(brand);
     }
 
 }

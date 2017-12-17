@@ -11,24 +11,10 @@ public class Product {
     public Product() {
     }
 
-    /**
-     * 
-     */
+
     private String productID;
-
-    /**
-     * 
-     */
-    private Model model;
-
-    /**
-     * 
-     */
-    private Brand brand;
-
-    /**
-     * 
-     */
+    private Model model = new Model();
+    private Brand brand = new Brand();
     private double price;
 
     public String getProductID() {
@@ -74,7 +60,7 @@ public class Product {
     /**
      * 
      */
-    private Store store;
+    private Store store = new Store();
 
     public Product(String productID, Model model, Brand brand, double price, Store store) {
         this.productID = productID;

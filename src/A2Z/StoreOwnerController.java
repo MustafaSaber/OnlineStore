@@ -1,29 +1,60 @@
 package A2Z;
 
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
+import java.util.Vector;
 
 public class StoreOwnerController
 {
-    private StoreOwner so;
+    private StoreOwner so = new StoreOwner() {
+        @Override
+        public String NumberOfViewsForEachProduct() {
+            return null;
+        }
+
+        @Override
+        public String MostViewiedProductInEachStore() {
+            return null;
+        }
+    } ;
+
+    public StoreOwner getSo() {
+        return so;
+    }
+
+    public void setSo(StoreOwner so) {
+        this.so = so;
+    }
 
     public StoreOwnerController() {
     }
 
-    public Boolean AddStoreCont(String id,String name) {
-        Store store = new Store(name,id);
-        so.getStores().add(store);
-        system.sc.AddStoreToDB(name,id);
-        return true;
+
+    public Boolean AddStoreCont(String name, String id , String linkoradd , Boolean link , Boolean address) {
+        Store store;
+        if(link ==  true)
+        {
+            store = new OnlineStore(name, id , linkoradd);
+        }
+        else
+        {
+            store = new OnsiteStore(name , id , linkoradd);
+        }
+        for (Store s : so.getStores()){
+            if(s.getStoreID().equals(id)) return false;
+        }
+        system.StoreCon.AddStoreToDB(name,id, store.getProducts());
+        return so.updateStores(store);
     }
 
-    public Boolean RemoveStoreCont(String id,String name) {
-        system.sc.RemoveStoreToDB(name,id);
-        for (Store store : so.getStores())
+    public Boolean RemoveStoreCont(String name,String id) {
+        system.StoreCon.RemoveStoreToDB(name,id);
+        for (int i=0;i<so.getStores().size();i++)
         {
-            if(store.getStoreID().equals(id) && store.getName().equals(name))
+            if(so.getStores().get(i).getStoreID().equals(id))
             {
-                so.getStores().remove(store);
-                return true;
+                return so.deleteStore(so.getStores().get(i));
             }
         }
         return false;
@@ -40,33 +71,22 @@ public class StoreOwnerController
 
     public void NumberOfViewsForEachProduct() //number of views of each model in a store
     {
-        for (Store store : so.getStores())
-        {
-            for(Product p : store.getProducts()) {
-                System.out.println("Product: " + p.getModel().getName() + " >> " + p.getModel().getView());
-            }
-        }
+        System.out.println(so.NumberOfViewsForEachProduct());
     }
     public void MostViewiedProductInEachStore() //	Get the most viewed product in a store
     {
-        int mostViews = 0;
-        String modelName = "";
-        for (Store store : so.getStores())
-        {
-            for(Product p : store.getProducts())
-            {
-                 modelName = p.getModel().getName();
-                 if(mostViews < (p.getModel().getView()))
-                     mostViews = p.getModel().getView();
-
-            }
-        }
-        System.out.println("The most viewed product: "+ modelName+" >> "+ mostViews);
+        System.out.println(so.MostViewiedProductInEachStore());
     }
 
-    public Boolean AddStoreOwnerToDBCont(String name, String email,String username,String password) {
-        StoreOwner storeOwner = new StoreOwner(name,email,username,password);
-        system.storeOwners.add(storeOwner);
+    public Boolean AddStoreOwnerToDBCont(String name, String email,String username,String password,boolean p) {
+        if (p) {
+            StoreOwner storeOwner = new StoreOwnerRegular(name, email, username, password);
+            system.storeOwners.add(storeOwner);
+        }
+        else{
+            StoreOwner storeOwner = new StoreOwnerPremuim(name, email, username, password);
+            system.storeOwners.add(storeOwner);
+        }
         return true;
     }
 
