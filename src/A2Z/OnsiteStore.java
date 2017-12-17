@@ -7,6 +7,11 @@ public class OnsiteStore extends Store {
         Address = link;
     }
 
+    public OnsiteStore(String name, String storeID, String address) {
+        super(name, storeID);
+        Address = address;
+    }
+
     public String getAddress() {
         return Address;
     }
@@ -14,5 +19,4 @@ public class OnsiteStore extends Store {
     public void setAddress(String address) {
         Address = address;
     }
-
 }

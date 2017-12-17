@@ -1,5 +1,7 @@
 package A2Z;
 
+import javafx.scene.control.RadioButton;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,13 +16,19 @@ public class Vstore extends JFrame{
     JLabel label2=new JLabel("Enter Store ID :");
     JLabel label3=new JLabel("Enter The New Store Name :");
     JLabel label4=new JLabel("Click On Any Button !!");
+    JLabel label5=new JLabel("Enter address or link:");
+    JLabel label6=new JLabel("Select for online store.");
+    JLabel label7=new JLabel("Select for onsite store.");
     JTextField StoreName=new JTextField(50);
     JTextField StoreID=new JTextField(50);
     JTextField newStoreName=new JTextField(50);
+    JTextField LinkORAddress = new JTextField(50);
     JButton Add = new JButton("Add Store");
     JButton Remove = new JButton("Remove Store");
     JButton Update = new JButton("Update");
     JButton Back = new JButton("Back");
+    JRadioButton onsiteStore = new JRadioButton();
+    JRadioButton onlineStore = new JRadioButton();
     StoreOwner myStoreOwner;//=new StoreOwner();
 
     public Vstore(String UserName){
@@ -42,6 +50,8 @@ public class Vstore extends JFrame{
         getContentPane().add(StoreName);
         getContentPane().add(label2);
         getContentPane().add(StoreID);
+        getContentPane().add(label5);
+        getContentPane().add(LinkORAddress);
         getContentPane().add(label3);
         getContentPane().add(newStoreName);
         getContentPane().add(Add);
@@ -49,6 +59,10 @@ public class Vstore extends JFrame{
         getContentPane().add(Update);
         getContentPane().add(Back);
         getContentPane().add(label4);
+        getContentPane().add(label6);
+        getContentPane().add(onlineStore);
+        getContentPane().add(label7);
+        getContentPane().add(onsiteStore);
 
     }
 
@@ -60,13 +74,21 @@ public class Vstore extends JFrame{
 
             boolean flag=false;
             if(buttonPressed.equals(Add)){
-                if(!StoreName.getText().equals("") && !StoreID.getText().equals("")){
-                    flag=system.StoreOwnerCon.AddStoreCont(StoreName.getText(),StoreID.getText());
-                    myStoreOwner.setStores(system.StoreOwnerCon.getSo().getStores());
+                if(!onlineStore.isSelected() && !onsiteStore.isSelected())
+                    JOptionPane.showMessageDialog(null,"You must choose a onsite or online" ,"Error",JOptionPane.WARNING_MESSAGE);
+                else {
+                    if (!StoreName.getText().equals("") && !StoreID.getText().equals("") && !LinkORAddress.getText().equals("")) {
+                        flag = system.StoreOwnerCon.AddStoreCont(StoreName.getText(), StoreID.getText() , LinkORAddress.getText() , onlineStore.isSelected() , onsiteStore.isSelected());
+                        myStoreOwner.setStores(system.StoreOwnerCon.getSo().getStores());
+                    } else {
+                        flag = false;
+                    }
+                    if (flag == true) {
+                        label4.setText("AddStore Store To DB successfully ");
+                    } else {
+                        label4.setText("AddStore Store To DB fail ");
+                    }
                 }
-                else {flag=false;}
-                if(flag==true){label4.setText("AddStore Store To DB successfully ");}
-                else {label4.setText("AddStore Store To DB fail ");}
                 //System.out.println(myStoreOwner.getStores().size());
 
             }

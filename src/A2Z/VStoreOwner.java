@@ -60,7 +60,10 @@ public class VStoreOwner extends JFrame{
         getContentPane().add(label);
 
         for (int i = 0; i < myStoreOwner.getStores().size(); i++) {
-            view.add(new JButton(myStoreOwner.getStores().get(i).getName()));
+            String style = "";
+            if(myStoreOwner.getStores().get(i) instanceof OnlineStore) style = "Online store: ";
+            else if(myStoreOwner.getStores().get(i) instanceof OnsiteStore) style = "Onsite store: ";
+            view.add(new JButton( style + myStoreOwner.getStores().get(i).getName()));
             view.get(i).setPreferredSize(new Dimension(550, 20));
             getContentPane().add(view.get(i));
         }

@@ -10,6 +10,11 @@ public class OnlineStore extends Store {
         Link = link;
     }
 
+    public OnlineStore(String name, String storeID, String link) {
+        super(name, storeID);
+        Link = link;
+    }
+
     public String getLink() {
         return Link;
     }

@@ -1,6 +1,8 @@
 package A2Z;
 
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import java.util.Vector;
 
 public class StoreOwnerController
@@ -29,8 +31,16 @@ public class StoreOwnerController
     }
 
 
-    public Boolean AddStoreCont(String name,String id) {
-        Store store = new Store(name,id);
+    public Boolean AddStoreCont(String name, String id , String linkoradd , Boolean link , Boolean address) {
+        Store store;
+        if(link ==  true)
+        {
+            store = new OnlineStore(name, id , linkoradd);
+        }
+        else
+        {
+            store = new OnsiteStore(name , id , linkoradd);
+        }
         for (Store s : so.getStores()){
             if(s.getStoreID().equals(id)) return false;
         }
