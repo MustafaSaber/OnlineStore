@@ -15,7 +15,6 @@ public class Store {
     public Store(){
         Name="";
         StoreID="";
-        Products=new Vector<>();
     }
 
     public Store(String name, String storeID) {

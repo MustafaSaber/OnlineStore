@@ -21,7 +21,7 @@ public class CartController {
     /**
      * 
      */
-    private Cart cart;
+    private Cart cart = new Cart();
 
     public Cart getCart() {
         return cart;
