@@ -19,13 +19,13 @@ public class VaddRemadmin extends JFrame{
     JTextField AdminName=new JTextField(50);
     JTextField AdminEmail=new JTextField(50);
     JTextField AdminUsername=new JTextField(50);
-    JTextField AdminPassword=new JTextField(50);
+    JPasswordField AdminPassword=new JPasswordField(50);
     JTextField newAdminUsername=new JTextField(50);
     JTextField newAdminPassword=new JTextField(50);
-    JButton Add = new JButton("AddStore");
-    JButton Remove = new JButton("RemoveStore");
-    JButton UpdateN = new JButton("Update Name");
-    JButton UpdateP = new JButton("Update Password");
+    JButton Add = new JButton("Add admin");
+    JButton Remove = new JButton("Remove admin");
+    JButton UpdateN = new JButton("Update admin name");
+    JButton UpdateP = new JButton("Update admin password");
     JButton Back = new JButton("Back");
     Administrator myAdmin=new Administrator();
 
@@ -75,30 +75,30 @@ public class VaddRemadmin extends JFrame{
             if(buttonPressed.equals(Add)){
                 flag= AdminCon.AddAdminToDBCont(AdminName.getText(),AdminEmail.getText(),AdminUsername.getText(),AdminPassword.getText());
                 if(flag){
-                    label7.setText("AddStore Admin To DB successfully ");}
+                    label7.setText("Add admin To DB successfully ");}
                 else {
-                    label7.setText("AddStore Admin To DB fail ");}
+                    label7.setText("Add admin To DB failed ");}
             }
             if(buttonPressed.equals(Remove)){
                 flag= AdminCon.RemoveAdminFromDBCont(AdminUsername.getText());
                 if(flag){
-                    label7.setText("RemoveStore Admin To DB successfully ");}
+                    label7.setText("Remove Admin To DB successfully ");}
                 else {
-                    label7.setText("RemoveStore Admin To DB fail ");}
+                    label7.setText("Remove Admin To DB fail ");}
             }
             if(buttonPressed.equals(UpdateN)){
                 flag= AdminCon.UpdateAdminName(AdminUsername.getText(),newAdminUsername.getText());
                 if(flag){
-                    label7.setText("Update Admin To DB successfully ");}
+                    label7.setText("Update admin name To DB successfully ");}
                 else {
-                    label7.setText("Update Admin To DB fail ");}
+                    label7.setText("Update admin name To DB fail ");}
             }
             if(buttonPressed.equals(UpdateP)){
                 flag= AdminCon.UpdateAdminPassword(AdminUsername.getText() , newAdminPassword.getText());
                 if(flag){
-                    label7.setText("Update Admin To DB successfully ");}
+                    label7.setText("Update admin password To DB successfully ");}
                 else {
-                    label7.setText("Update Admin To DB fail ");}
+                    label7.setText("Update admin password To DB fail ");}
             }
             if(buttonPressed.equals(Back)){
                 Vadmin object1=new Vadmin(myAdmin.getUsername());

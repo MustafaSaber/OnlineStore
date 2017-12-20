@@ -15,7 +15,7 @@ public class View extends JFrame{
     Vector<JButton> productsB=new Vector<>();
     Vector<Product> products=new Vector<>();
     JTextField Email=new JTextField(50);
-    JTextField Password=new JTextField(50);
+    JPasswordField Password=new JPasswordField(50);
     JButton RegisterN = new JButton("Register As Normal User");
     JButton RegisterSO = new JButton("Register As Store Owner");
     JButton Login = new JButton("Login");

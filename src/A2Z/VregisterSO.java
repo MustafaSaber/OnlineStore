@@ -18,7 +18,7 @@ public class VregisterSO extends JFrame{
     JTextField Name =new JTextField(50);
     JTextField Email =new JTextField(50);
     JTextField Username =new JTextField(50);
-    JTextField Password =new JTextField(50);
+    JPasswordField Password =new JPasswordField(50);
     JCheckBox prem = new JCheckBox();
 
     JButton Register = new JButton("Register");
