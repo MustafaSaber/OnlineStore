@@ -40,9 +40,4 @@ public class Testing {
 
     }
 
-    @Test
-    public void loginT(){
-
-    }
-
 }
