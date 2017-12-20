@@ -32,4 +32,5 @@ public class ProductController {
        return ("Product ID: "+p.getProductID() + " ,Product brand: " + p.getBrand().getName() + "\n,Product model: " + p.getModel().getName() + "\n,Product price: " + p.getPrice() + "\n,Product store: " + p.getStore() + "\n,No of views: " + p.getModel().getView());
     }
 
+
 }
